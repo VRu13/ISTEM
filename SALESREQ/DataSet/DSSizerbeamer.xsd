@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSizerbeamer" targetNamespace="http://tempuri.org/DSSizerbeamer.xsd" xmlns:mstns="http://tempuri.org/DSSizerbeamer.xsd" xmlns="http://tempuri.org/DSSizerbeamer.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="istem_smsConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="istem_smsConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.istem_smsConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DTSizerBeamerTableAdapter" GeneratorDataComponentClassName="DTSizerBeamerTableAdapter" Name="DTSizerBeamer" UserDataComponentName="DTSizerBeamerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.remain_period1_mtr, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs, wv_prod_plan_header.plan_month AS Expr2, 
+                         wv_prod_plan_header.month1_work_day, wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, 
+                         wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.month1_period1_from, wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, 
+                         wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, 
+                         wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, wv_prod_plan_header.month3_period2_to, wv_prod_plan_header.remain_work_day, 
+                         wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month1_period2_mtr, 
+                         wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, wv_fabric_analysis_master.length_gr, 
+                         wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, CASE WHEN (wv_fabric_analysis_master.sizer_F) = 1 THEN 'S' WHEN (wv_fabric_analysis_master.sizer_F) &lt;&gt; 1 THEN 'B' END AS FlagType
+FROM            wv_prod_plan_detail3 INNER JOIN
+                         wv_prod_plan_header ON wv_prod_plan_detail3.plan_month = wv_prod_plan_header.plan_month INNER JOIN
+                         wv_fabric_analysis_master ON wv_prod_plan_detail3.grey_no = wv_fabric_analysis_master.grey_no
+GROUP BY wv_prod_plan_header.plan_month, wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.remain_work_day, wv_prod_plan_header.month1_work_day, 
+                         wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, wv_prod_plan_header.month1_period1_from, 
+                         wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, 
+                         wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, 
+                         wv_prod_plan_header.month3_period2_to, wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.remain_period1_mtr, 
+                         wv_prod_plan_detail3.month1_period2_mtr, wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, 
+                         wv_fabric_analysis_master.length_gr, wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, 
+                         wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grey_no" DataSetColumn="grey_no" />
+              <Mapping SourceColumn="loom_model" DataSetColumn="loom_model" />
+              <Mapping SourceColumn="remain_period1_pcs" DataSetColumn="remain_period1_pcs" />
+              <Mapping SourceColumn="remain_period1_mtr" DataSetColumn="remain_period1_mtr" />
+              <Mapping SourceColumn="remain_period2_pcs" DataSetColumn="remain_period2_pcs" />
+              <Mapping SourceColumn="remain_period2_mtr" DataSetColumn="remain_period2_mtr" />
+              <Mapping SourceColumn="month1_period1_pcs" DataSetColumn="month1_period1_pcs" />
+              <Mapping SourceColumn="month1_period1_mtr" DataSetColumn="month1_period1_mtr" />
+              <Mapping SourceColumn="month1_period2_pcs" DataSetColumn="month1_period2_pcs" />
+              <Mapping SourceColumn="month1_period2_mtr" DataSetColumn="month1_period2_mtr" />
+              <Mapping SourceColumn="month2_period1_pcs" DataSetColumn="month2_period1_pcs" />
+              <Mapping SourceColumn="month2_period1_mtr" DataSetColumn="month2_period1_mtr" />
+              <Mapping SourceColumn="month2_period2_pcs" DataSetColumn="month2_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_mtr" DataSetColumn="month2_period2_mtr" />
+              <Mapping SourceColumn="month3_period1_pcs" DataSetColumn="month3_period1_pcs" />
+              <Mapping SourceColumn="month3_period1_mtr" DataSetColumn="month3_period1_mtr" />
+              <Mapping SourceColumn="month3_period2_pcs" DataSetColumn="month3_period2_pcs" />
+              <Mapping SourceColumn="month3_period2_mtr" DataSetColumn="month3_period2_mtr" />
+              <Mapping SourceColumn="length_gr" DataSetColumn="length_gr" />
+              <Mapping SourceColumn="remain_work_day" DataSetColumn="remain_work_day" />
+              <Mapping SourceColumn="month1_work_day" DataSetColumn="month1_work_day" />
+              <Mapping SourceColumn="month2_work_day" DataSetColumn="month2_work_day" />
+              <Mapping SourceColumn="month3_work_day" DataSetColumn="month3_work_day" />
+              <Mapping SourceColumn="remain_period1_from" DataSetColumn="remain_period1_from" />
+              <Mapping SourceColumn="remain_period1_to" DataSetColumn="remain_period1_to" />
+              <Mapping SourceColumn="remain_period2_from" DataSetColumn="remain_period2_from" />
+              <Mapping SourceColumn="remain_period2_to" DataSetColumn="remain_period2_to" />
+              <Mapping SourceColumn="month1_period1_from" DataSetColumn="month1_period1_from" />
+              <Mapping SourceColumn="month1_period1_to" DataSetColumn="month1_period1_to" />
+              <Mapping SourceColumn="month1_period2_from" DataSetColumn="month1_period2_from" />
+              <Mapping SourceColumn="month1_period2_to" DataSetColumn="month1_period2_to" />
+              <Mapping SourceColumn="month2_period1_from" DataSetColumn="month2_period1_from" />
+              <Mapping SourceColumn="month2_period1_to" DataSetColumn="month2_period1_to" />
+              <Mapping SourceColumn="month2_period2_from" DataSetColumn="month2_period2_from" />
+              <Mapping SourceColumn="month2_period2_to" DataSetColumn="month2_period2_to" />
+              <Mapping SourceColumn="month3_period1_from" DataSetColumn="month3_period1_from" />
+              <Mapping SourceColumn="month3_period1_to" DataSetColumn="month3_period1_to" />
+              <Mapping SourceColumn="month3_period2_from" DataSetColumn="month3_period2_from" />
+              <Mapping SourceColumn="month3_period2_to" DataSetColumn="month3_period2_to" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="FlagType" DataSetColumn="FlagType" />
+              <Mapping SourceColumn="warp_ln" DataSetColumn="warp_ln" />
+              <Mapping SourceColumn="sizer_F" DataSetColumn="sizer_F" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DSSizer1TableAdapter" GeneratorDataComponentClassName="DSSizer1TableAdapter" Name="DSSizer1" UserDataComponentName="DSSizer1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.remain_period1_mtr, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs, wv_prod_plan_header.plan_month AS Expr2, 
+                         wv_prod_plan_header.month1_work_day, wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, 
+                         wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.month1_period1_from, wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, 
+                         wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, 
+                         wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, wv_prod_plan_header.month3_period2_to, wv_prod_plan_header.remain_work_day, 
+                         wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month1_period2_mtr, 
+                         wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, wv_fabric_analysis_master.length_gr, 
+                         wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, CASE WHEN (wv_fabric_analysis_master.sizer_F) = 1 THEN 'S' WHEN (wv_fabric_analysis_master.sizer_F) &lt;&gt; 1 THEN 'B' END AS FlagType
+FROM            wv_prod_plan_detail3 INNER JOIN
+                         wv_prod_plan_header ON wv_prod_plan_detail3.plan_month = wv_prod_plan_header.plan_month INNER JOIN
+                         wv_fabric_analysis_master ON wv_prod_plan_detail3.grey_no = wv_fabric_analysis_master.grey_no 
+WHERE        (wv_fabric_analysis_master.sizer_F = '1')
+GROUP BY wv_prod_plan_header.plan_month, wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.remain_work_day, wv_prod_plan_header.month1_work_day, 
+                         wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, wv_prod_plan_header.month1_period1_from, 
+                         wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, 
+                         wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, 
+                         wv_prod_plan_header.month3_period2_to, wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.remain_period1_mtr, 
+                         wv_prod_plan_detail3.month1_period2_mtr, wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, 
+                         wv_fabric_analysis_master.length_gr, wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, 
+                         wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grey_no" DataSetColumn="grey_no" />
+              <Mapping SourceColumn="loom_model" DataSetColumn="loom_model" />
+              <Mapping SourceColumn="remain_period1_pcs" DataSetColumn="remain_period1_pcs" />
+              <Mapping SourceColumn="remain_period1_mtr" DataSetColumn="remain_period1_mtr" />
+              <Mapping SourceColumn="month1_period1_pcs" DataSetColumn="month1_period1_pcs" />
+              <Mapping SourceColumn="month1_period1_mtr" DataSetColumn="month1_period1_mtr" />
+              <Mapping SourceColumn="month2_period1_pcs" DataSetColumn="month2_period1_pcs" />
+              <Mapping SourceColumn="month2_period1_mtr" DataSetColumn="month2_period1_mtr" />
+              <Mapping SourceColumn="month3_period1_pcs" DataSetColumn="month3_period1_pcs" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="month1_work_day" DataSetColumn="month1_work_day" />
+              <Mapping SourceColumn="month2_work_day" DataSetColumn="month2_work_day" />
+              <Mapping SourceColumn="month3_work_day" DataSetColumn="month3_work_day" />
+              <Mapping SourceColumn="remain_period1_from" DataSetColumn="remain_period1_from" />
+              <Mapping SourceColumn="remain_period1_to" DataSetColumn="remain_period1_to" />
+              <Mapping SourceColumn="remain_period2_from" DataSetColumn="remain_period2_from" />
+              <Mapping SourceColumn="remain_period2_to" DataSetColumn="remain_period2_to" />
+              <Mapping SourceColumn="month1_period1_from" DataSetColumn="month1_period1_from" />
+              <Mapping SourceColumn="month1_period1_to" DataSetColumn="month1_period1_to" />
+              <Mapping SourceColumn="month1_period2_from" DataSetColumn="month1_period2_from" />
+              <Mapping SourceColumn="month1_period2_to" DataSetColumn="month1_period2_to" />
+              <Mapping SourceColumn="month2_period1_from" DataSetColumn="month2_period1_from" />
+              <Mapping SourceColumn="month2_period1_to" DataSetColumn="month2_period1_to" />
+              <Mapping SourceColumn="month2_period2_from" DataSetColumn="month2_period2_from" />
+              <Mapping SourceColumn="month2_period2_to" DataSetColumn="month2_period2_to" />
+              <Mapping SourceColumn="month3_period1_from" DataSetColumn="month3_period1_from" />
+              <Mapping SourceColumn="month3_period1_to" DataSetColumn="month3_period1_to" />
+              <Mapping SourceColumn="month3_period2_from" DataSetColumn="month3_period2_from" />
+              <Mapping SourceColumn="month3_period2_to" DataSetColumn="month3_period2_to" />
+              <Mapping SourceColumn="remain_work_day" DataSetColumn="remain_work_day" />
+              <Mapping SourceColumn="month3_period2_pcs" DataSetColumn="month3_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_pcs" DataSetColumn="month2_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_mtr" DataSetColumn="month2_period2_mtr" />
+              <Mapping SourceColumn="month1_period2_pcs" DataSetColumn="month1_period2_pcs" />
+              <Mapping SourceColumn="month1_period2_mtr" DataSetColumn="month1_period2_mtr" />
+              <Mapping SourceColumn="remain_period2_pcs" DataSetColumn="remain_period2_pcs" />
+              <Mapping SourceColumn="remain_period2_mtr" DataSetColumn="remain_period2_mtr" />
+              <Mapping SourceColumn="month3_period2_mtr" DataSetColumn="month3_period2_mtr" />
+              <Mapping SourceColumn="month3_period1_mtr" DataSetColumn="month3_period1_mtr" />
+              <Mapping SourceColumn="length_gr" DataSetColumn="length_gr" />
+              <Mapping SourceColumn="warp_ln" DataSetColumn="warp_ln" />
+              <Mapping SourceColumn="sizer_F" DataSetColumn="sizer_F" />
+              <Mapping SourceColumn="FlagType" DataSetColumn="FlagType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DSBeamer1TableAdapter" GeneratorDataComponentClassName="DSBeamer1TableAdapter" Name="DSBeamer1" UserDataComponentName="DSBeamer1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.remain_period1_mtr, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs, wv_prod_plan_header.plan_month AS Expr2, 
+                         wv_prod_plan_header.month1_work_day, wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, 
+                         wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.month1_period1_from, wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, 
+                         wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, 
+                         wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, wv_prod_plan_header.month3_period2_to, wv_prod_plan_header.remain_work_day, 
+                         wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month1_period2_mtr, 
+                         wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, wv_fabric_analysis_master.length_gr, 
+                         CASE WHEN (wv_fabric_analysis_master.sizer_F) = 1 THEN 'S01' WHEN (wv_fabric_analysis_master.sizer_F) &lt;&gt; 1 THEN 'B01' END AS FlagID, wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, 
+                         CASE WHEN (wv_fabric_analysis_master.sizer_F) = 1 THEN 'S' WHEN (wv_fabric_analysis_master.sizer_F) &lt;&gt; 1 THEN 'B' END AS FlagType, wv_prep_machine_master.prep_mc_type, 
+                         wv_prep_machine_master.prep_mc_capacity
+FROM            wv_prod_plan_detail3 INNER JOIN
+                         wv_prod_plan_header ON wv_prod_plan_detail3.plan_month = wv_prod_plan_header.plan_month INNER JOIN
+                         wv_fabric_analysis_master ON wv_prod_plan_detail3.grey_no = wv_fabric_analysis_master.grey_no CROSS JOIN
+                         wv_prep_machine_master
+WHERE        (wv_fabric_analysis_master.sizer_F &lt;&gt; 1)
+GROUP BY wv_prod_plan_header.plan_month, wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.remain_work_day, wv_prod_plan_header.month1_work_day, 
+                         wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, wv_prod_plan_header.month1_period1_from, 
+                         wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, 
+                         wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, 
+                         wv_prod_plan_header.month3_period2_to, wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.remain_period1_mtr, 
+                         wv_prod_plan_detail3.month1_period2_mtr, wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, 
+                         wv_fabric_analysis_master.length_gr, wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, 
+                         wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs, wv_prep_machine_master.prep_mc_type, wv_prep_machine_master.prep_mc_capacity</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grey_no" DataSetColumn="grey_no" />
+              <Mapping SourceColumn="loom_model" DataSetColumn="loom_model" />
+              <Mapping SourceColumn="remain_period1_pcs" DataSetColumn="remain_period1_pcs" />
+              <Mapping SourceColumn="remain_period1_mtr" DataSetColumn="remain_period1_mtr" />
+              <Mapping SourceColumn="month1_period1_pcs" DataSetColumn="month1_period1_pcs" />
+              <Mapping SourceColumn="month1_period1_mtr" DataSetColumn="month1_period1_mtr" />
+              <Mapping SourceColumn="month2_period1_pcs" DataSetColumn="month2_period1_pcs" />
+              <Mapping SourceColumn="month2_period1_mtr" DataSetColumn="month2_period1_mtr" />
+              <Mapping SourceColumn="month3_period1_pcs" DataSetColumn="month3_period1_pcs" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="month1_work_day" DataSetColumn="month1_work_day" />
+              <Mapping SourceColumn="month2_work_day" DataSetColumn="month2_work_day" />
+              <Mapping SourceColumn="month3_work_day" DataSetColumn="month3_work_day" />
+              <Mapping SourceColumn="remain_period1_from" DataSetColumn="remain_period1_from" />
+              <Mapping SourceColumn="remain_period1_to" DataSetColumn="remain_period1_to" />
+              <Mapping SourceColumn="remain_period2_from" DataSetColumn="remain_period2_from" />
+              <Mapping SourceColumn="remain_period2_to" DataSetColumn="remain_period2_to" />
+              <Mapping SourceColumn="month1_period1_from" DataSetColumn="month1_period1_from" />
+              <Mapping SourceColumn="month1_period1_to" DataSetColumn="month1_period1_to" />
+              <Mapping SourceColumn="month1_period2_from" DataSetColumn="month1_period2_from" />
+              <Mapping SourceColumn="month1_period2_to" DataSetColumn="month1_period2_to" />
+              <Mapping SourceColumn="month2_period1_from" DataSetColumn="month2_period1_from" />
+              <Mapping SourceColumn="month2_period1_to" DataSetColumn="month2_period1_to" />
+              <Mapping SourceColumn="month2_period2_from" DataSetColumn="month2_period2_from" />
+              <Mapping SourceColumn="month2_period2_to" DataSetColumn="month2_period2_to" />
+              <Mapping SourceColumn="month3_period1_from" DataSetColumn="month3_period1_from" />
+              <Mapping SourceColumn="month3_period1_to" DataSetColumn="month3_period1_to" />
+              <Mapping SourceColumn="month3_period2_from" DataSetColumn="month3_period2_from" />
+              <Mapping SourceColumn="month3_period2_to" DataSetColumn="month3_period2_to" />
+              <Mapping SourceColumn="remain_work_day" DataSetColumn="remain_work_day" />
+              <Mapping SourceColumn="month3_period2_pcs" DataSetColumn="month3_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_pcs" DataSetColumn="month2_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_mtr" DataSetColumn="month2_period2_mtr" />
+              <Mapping SourceColumn="month1_period2_pcs" DataSetColumn="month1_period2_pcs" />
+              <Mapping SourceColumn="month1_period2_mtr" DataSetColumn="month1_period2_mtr" />
+              <Mapping SourceColumn="remain_period2_pcs" DataSetColumn="remain_period2_pcs" />
+              <Mapping SourceColumn="remain_period2_mtr" DataSetColumn="remain_period2_mtr" />
+              <Mapping SourceColumn="month3_period2_mtr" DataSetColumn="month3_period2_mtr" />
+              <Mapping SourceColumn="month3_period1_mtr" DataSetColumn="month3_period1_mtr" />
+              <Mapping SourceColumn="length_gr" DataSetColumn="length_gr" />
+              <Mapping SourceColumn="FlagID" DataSetColumn="FlagID" />
+              <Mapping SourceColumn="warp_ln" DataSetColumn="warp_ln" />
+              <Mapping SourceColumn="sizer_F" DataSetColumn="sizer_F" />
+              <Mapping SourceColumn="FlagType" DataSetColumn="FlagType" />
+              <Mapping SourceColumn="prep_mc_type" DataSetColumn="prep_mc_type" />
+              <Mapping SourceColumn="prep_mc_capacity" DataSetColumn="prep_mc_capacity" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DSBeamerTableAdapter" GeneratorDataComponentClassName="DSBeamerTableAdapter" Name="DSBeamer" UserDataComponentName="DSBeamerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.remain_period1_mtr, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs, wv_prod_plan_header.plan_month AS Expr2, 
+                         wv_prod_plan_header.month1_work_day, wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, 
+                         wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.month1_period1_from, wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, 
+                         wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, 
+                         wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, wv_prod_plan_header.month3_period2_to, wv_prod_plan_header.remain_work_day, 
+                         wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month1_period2_mtr, 
+                         wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, wv_fabric_analysis_master.length_gr, 
+                         wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, CASE WHEN (wv_fabric_analysis_master.sizer_F) = 1 THEN 'S' WHEN (wv_fabric_analysis_master.sizer_F) &lt;&gt; 1 THEN 'B' END AS FlagType
+FROM            wv_prod_plan_detail3 INNER JOIN
+                         wv_prod_plan_header ON wv_prod_plan_detail3.plan_month = wv_prod_plan_header.plan_month INNER JOIN
+                         wv_fabric_analysis_master ON wv_prod_plan_detail3.grey_no = wv_fabric_analysis_master.grey_no
+WHERE        (wv_fabric_analysis_master.sizer_F &lt;&gt; '1')
+GROUP BY wv_prod_plan_header.plan_month, wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.remain_work_day, wv_prod_plan_header.month1_work_day, 
+                         wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, wv_prod_plan_header.month1_period1_from, 
+                         wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, 
+                         wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, 
+                         wv_prod_plan_header.month3_period2_to, wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.remain_period1_mtr, 
+                         wv_prod_plan_detail3.month1_period2_mtr, wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, 
+                         wv_fabric_analysis_master.length_gr, wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, 
+                         wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grey_no" DataSetColumn="grey_no" />
+              <Mapping SourceColumn="loom_model" DataSetColumn="loom_model" />
+              <Mapping SourceColumn="remain_period1_pcs" DataSetColumn="remain_period1_pcs" />
+              <Mapping SourceColumn="remain_period1_mtr" DataSetColumn="remain_period1_mtr" />
+              <Mapping SourceColumn="month1_period1_pcs" DataSetColumn="month1_period1_pcs" />
+              <Mapping SourceColumn="month1_period1_mtr" DataSetColumn="month1_period1_mtr" />
+              <Mapping SourceColumn="month2_period1_pcs" DataSetColumn="month2_period1_pcs" />
+              <Mapping SourceColumn="month2_period1_mtr" DataSetColumn="month2_period1_mtr" />
+              <Mapping SourceColumn="month3_period1_pcs" DataSetColumn="month3_period1_pcs" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="month1_work_day" DataSetColumn="month1_work_day" />
+              <Mapping SourceColumn="month2_work_day" DataSetColumn="month2_work_day" />
+              <Mapping SourceColumn="month3_work_day" DataSetColumn="month3_work_day" />
+              <Mapping SourceColumn="remain_period1_from" DataSetColumn="remain_period1_from" />
+              <Mapping SourceColumn="remain_period1_to" DataSetColumn="remain_period1_to" />
+              <Mapping SourceColumn="remain_period2_from" DataSetColumn="remain_period2_from" />
+              <Mapping SourceColumn="remain_period2_to" DataSetColumn="remain_period2_to" />
+              <Mapping SourceColumn="month1_period1_from" DataSetColumn="month1_period1_from" />
+              <Mapping SourceColumn="month1_period1_to" DataSetColumn="month1_period1_to" />
+              <Mapping SourceColumn="month1_period2_from" DataSetColumn="month1_period2_from" />
+              <Mapping SourceColumn="month1_period2_to" DataSetColumn="month1_period2_to" />
+              <Mapping SourceColumn="month2_period1_from" DataSetColumn="month2_period1_from" />
+              <Mapping SourceColumn="month2_period1_to" DataSetColumn="month2_period1_to" />
+              <Mapping SourceColumn="month2_period2_from" DataSetColumn="month2_period2_from" />
+              <Mapping SourceColumn="month2_period2_to" DataSetColumn="month2_period2_to" />
+              <Mapping SourceColumn="month3_period1_from" DataSetColumn="month3_period1_from" />
+              <Mapping SourceColumn="month3_period1_to" DataSetColumn="month3_period1_to" />
+              <Mapping SourceColumn="month3_period2_from" DataSetColumn="month3_period2_from" />
+              <Mapping SourceColumn="month3_period2_to" DataSetColumn="month3_period2_to" />
+              <Mapping SourceColumn="remain_work_day" DataSetColumn="remain_work_day" />
+              <Mapping SourceColumn="month3_period2_pcs" DataSetColumn="month3_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_pcs" DataSetColumn="month2_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_mtr" DataSetColumn="month2_period2_mtr" />
+              <Mapping SourceColumn="month1_period2_pcs" DataSetColumn="month1_period2_pcs" />
+              <Mapping SourceColumn="month1_period2_mtr" DataSetColumn="month1_period2_mtr" />
+              <Mapping SourceColumn="remain_period2_pcs" DataSetColumn="remain_period2_pcs" />
+              <Mapping SourceColumn="remain_period2_mtr" DataSetColumn="remain_period2_mtr" />
+              <Mapping SourceColumn="month3_period2_mtr" DataSetColumn="month3_period2_mtr" />
+              <Mapping SourceColumn="month3_period1_mtr" DataSetColumn="month3_period1_mtr" />
+              <Mapping SourceColumn="length_gr" DataSetColumn="length_gr" />
+              <Mapping SourceColumn="warp_ln" DataSetColumn="warp_ln" />
+              <Mapping SourceColumn="sizer_F" DataSetColumn="sizer_F" />
+              <Mapping SourceColumn="FlagType" DataSetColumn="FlagType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSizerbeamer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSSizerbeamer" msprop:Generator_UserDSName="DSSizerbeamer">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTSizerBeamer" msprop:Generator_TableClassName="DTSizerBeamerDataTable" msprop:Generator_TableVarName="tableDTSizerBeamer" msprop:Generator_RowChangedName="DTSizerBeamerRowChanged" msprop:Generator_TablePropName="DTSizerBeamer" msprop:Generator_RowDeletingName="DTSizerBeamerRowDeleting" msprop:Generator_RowChangingName="DTSizerBeamerRowChanging" msprop:Generator_RowEvHandlerName="DTSizerBeamerRowChangeEventHandler" msprop:Generator_RowDeletedName="DTSizerBeamerRowDeleted" msprop:Generator_RowClassName="DTSizerBeamerRow" msprop:Generator_UserTableName="DTSizerBeamer" msprop:Generator_RowEvArgName="DTSizerBeamerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loom_model" msprop:Generator_ColumnVarNameInTable="columnloom_model" msprop:Generator_ColumnPropNameInRow="loom_model" msprop:Generator_ColumnPropNameInTable="loom_modelColumn" msprop:Generator_UserColumnName="loom_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remain_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period1_pcs" msprop:Generator_ColumnPropNameInRow="remain_period1_pcs" msprop:Generator_ColumnPropNameInTable="remain_period1_pcsColumn" msprop:Generator_UserColumnName="remain_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period1_mtr" msprop:Generator_ColumnPropNameInRow="remain_period1_mtr" msprop:Generator_ColumnPropNameInTable="remain_period1_mtrColumn" msprop:Generator_UserColumnName="remain_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period2_pcs" msprop:Generator_ColumnPropNameInRow="remain_period2_pcs" msprop:Generator_ColumnPropNameInTable="remain_period2_pcsColumn" msprop:Generator_UserColumnName="remain_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period2_mtr" msprop:Generator_ColumnPropNameInRow="remain_period2_mtr" msprop:Generator_ColumnPropNameInTable="remain_period2_mtrColumn" msprop:Generator_UserColumnName="remain_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_pcs" msprop:Generator_ColumnPropNameInRow="month1_period1_pcs" msprop:Generator_ColumnPropNameInTable="month1_period1_pcsColumn" msprop:Generator_UserColumnName="month1_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_mtr" msprop:Generator_ColumnPropNameInRow="month1_period1_mtr" msprop:Generator_ColumnPropNameInTable="month1_period1_mtrColumn" msprop:Generator_UserColumnName="month1_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_pcs" msprop:Generator_ColumnPropNameInRow="month1_period2_pcs" msprop:Generator_ColumnPropNameInTable="month1_period2_pcsColumn" msprop:Generator_UserColumnName="month1_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_mtr" msprop:Generator_ColumnPropNameInRow="month1_period2_mtr" msprop:Generator_ColumnPropNameInTable="month1_period2_mtrColumn" msprop:Generator_UserColumnName="month1_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_pcs" msprop:Generator_ColumnPropNameInRow="month2_period1_pcs" msprop:Generator_ColumnPropNameInTable="month2_period1_pcsColumn" msprop:Generator_UserColumnName="month2_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_mtr" msprop:Generator_ColumnPropNameInRow="month2_period1_mtr" msprop:Generator_ColumnPropNameInTable="month2_period1_mtrColumn" msprop:Generator_UserColumnName="month2_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_pcs" msprop:Generator_ColumnPropNameInRow="month2_period2_pcs" msprop:Generator_ColumnPropNameInTable="month2_period2_pcsColumn" msprop:Generator_UserColumnName="month2_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_mtr" msprop:Generator_ColumnPropNameInRow="month2_period2_mtr" msprop:Generator_ColumnPropNameInTable="month2_period2_mtrColumn" msprop:Generator_UserColumnName="month2_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_pcs" msprop:Generator_ColumnPropNameInRow="month3_period1_pcs" msprop:Generator_ColumnPropNameInTable="month3_period1_pcsColumn" msprop:Generator_UserColumnName="month3_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_mtr" msprop:Generator_ColumnPropNameInRow="month3_period1_mtr" msprop:Generator_ColumnPropNameInTable="month3_period1_mtrColumn" msprop:Generator_UserColumnName="month3_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_pcs" msprop:Generator_ColumnPropNameInRow="month3_period2_pcs" msprop:Generator_ColumnPropNameInTable="month3_period2_pcsColumn" msprop:Generator_UserColumnName="month3_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_mtr" msprop:Generator_ColumnPropNameInRow="month3_period2_mtr" msprop:Generator_ColumnPropNameInTable="month3_period2_mtrColumn" msprop:Generator_UserColumnName="month3_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="length_gr" msprop:Generator_ColumnVarNameInTable="columnlength_gr" msprop:Generator_ColumnPropNameInRow="length_gr" msprop:Generator_ColumnPropNameInTable="length_grColumn" msprop:Generator_UserColumnName="length_gr" type="xs:decimal" />
+              <xs:element name="remain_work_day" msprop:Generator_ColumnVarNameInTable="columnremain_work_day" msprop:Generator_ColumnPropNameInRow="remain_work_day" msprop:Generator_ColumnPropNameInTable="remain_work_dayColumn" msprop:Generator_UserColumnName="remain_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth1_work_day" msprop:Generator_ColumnPropNameInRow="month1_work_day" msprop:Generator_ColumnPropNameInTable="month1_work_dayColumn" msprop:Generator_UserColumnName="month1_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth2_work_day" msprop:Generator_ColumnPropNameInRow="month2_work_day" msprop:Generator_ColumnPropNameInTable="month2_work_dayColumn" msprop:Generator_UserColumnName="month2_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth3_work_day" msprop:Generator_ColumnPropNameInRow="month3_work_day" msprop:Generator_ColumnPropNameInTable="month3_work_dayColumn" msprop:Generator_UserColumnName="month3_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_from" msprop:Generator_ColumnVarNameInTable="columnremain_period1_from" msprop:Generator_ColumnPropNameInRow="remain_period1_from" msprop:Generator_ColumnPropNameInTable="remain_period1_fromColumn" msprop:Generator_UserColumnName="remain_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period1_to" msprop:Generator_ColumnVarNameInTable="columnremain_period1_to" msprop:Generator_ColumnPropNameInRow="remain_period1_to" msprop:Generator_ColumnPropNameInTable="remain_period1_toColumn" msprop:Generator_UserColumnName="remain_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_from" msprop:Generator_ColumnVarNameInTable="columnremain_period2_from" msprop:Generator_ColumnPropNameInRow="remain_period2_from" msprop:Generator_ColumnPropNameInTable="remain_period2_fromColumn" msprop:Generator_UserColumnName="remain_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_to" msprop:Generator_ColumnVarNameInTable="columnremain_period2_to" msprop:Generator_ColumnPropNameInRow="remain_period2_to" msprop:Generator_ColumnPropNameInTable="remain_period2_toColumn" msprop:Generator_UserColumnName="remain_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_from" msprop:Generator_ColumnPropNameInRow="month1_period1_from" msprop:Generator_ColumnPropNameInTable="month1_period1_fromColumn" msprop:Generator_UserColumnName="month1_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_to" msprop:Generator_ColumnPropNameInRow="month1_period1_to" msprop:Generator_ColumnPropNameInTable="month1_period1_toColumn" msprop:Generator_UserColumnName="month1_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_from" msprop:Generator_ColumnPropNameInRow="month1_period2_from" msprop:Generator_ColumnPropNameInTable="month1_period2_fromColumn" msprop:Generator_UserColumnName="month1_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_to" msprop:Generator_ColumnPropNameInRow="month1_period2_to" msprop:Generator_ColumnPropNameInTable="month1_period2_toColumn" msprop:Generator_UserColumnName="month1_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_from" msprop:Generator_ColumnPropNameInRow="month2_period1_from" msprop:Generator_ColumnPropNameInTable="month2_period1_fromColumn" msprop:Generator_UserColumnName="month2_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_to" msprop:Generator_ColumnPropNameInRow="month2_period1_to" msprop:Generator_ColumnPropNameInTable="month2_period1_toColumn" msprop:Generator_UserColumnName="month2_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_from" msprop:Generator_ColumnPropNameInRow="month2_period2_from" msprop:Generator_ColumnPropNameInTable="month2_period2_fromColumn" msprop:Generator_UserColumnName="month2_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_to" msprop:Generator_ColumnPropNameInRow="month2_period2_to" msprop:Generator_ColumnPropNameInTable="month2_period2_toColumn" msprop:Generator_UserColumnName="month2_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_from" msprop:Generator_ColumnPropNameInRow="month3_period1_from" msprop:Generator_ColumnPropNameInTable="month3_period1_fromColumn" msprop:Generator_UserColumnName="month3_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_to" msprop:Generator_ColumnPropNameInRow="month3_period1_to" msprop:Generator_ColumnPropNameInTable="month3_period1_toColumn" msprop:Generator_UserColumnName="month3_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_from" msprop:Generator_ColumnPropNameInRow="month3_period2_from" msprop:Generator_ColumnPropNameInTable="month3_period2_fromColumn" msprop:Generator_UserColumnName="month3_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_to" msprop:Generator_ColumnPropNameInRow="month3_period2_to" msprop:Generator_ColumnPropNameInTable="month3_period2_toColumn" msprop:Generator_UserColumnName="month3_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlagType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlagType" msprop:Generator_ColumnPropNameInRow="FlagType" msprop:Generator_ColumnPropNameInTable="FlagTypeColumn" msprop:Generator_UserColumnName="FlagType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="warp_ln" msprop:Generator_ColumnVarNameInTable="columnwarp_ln" msprop:Generator_ColumnPropNameInRow="warp_ln" msprop:Generator_ColumnPropNameInTable="warp_lnColumn" msprop:Generator_UserColumnName="warp_ln" type="xs:decimal" />
+              <xs:element name="sizer_F" msprop:Generator_ColumnVarNameInTable="columnsizer_F" msprop:Generator_ColumnPropNameInRow="sizer_F" msprop:Generator_ColumnPropNameInTable="sizer_FColumn" msprop:Generator_UserColumnName="sizer_F" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DSSizer1" msprop:Generator_TableClassName="DSSizer1DataTable" msprop:Generator_TableVarName="tableDSSizer1" msprop:Generator_TablePropName="DSSizer1" msprop:Generator_RowDeletingName="DSSizer1RowDeleting" msprop:Generator_RowChangingName="DSSizer1RowChanging" msprop:Generator_RowEvHandlerName="DSSizer1RowChangeEventHandler" msprop:Generator_RowDeletedName="DSSizer1RowDeleted" msprop:Generator_UserTableName="DSSizer1" msprop:Generator_RowChangedName="DSSizer1RowChanged" msprop:Generator_RowEvArgName="DSSizer1RowChangeEvent" msprop:Generator_RowClassName="DSSizer1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loom_model" msprop:Generator_ColumnVarNameInTable="columnloom_model" msprop:Generator_ColumnPropNameInRow="loom_model" msprop:Generator_ColumnPropNameInTable="loom_modelColumn" msprop:Generator_UserColumnName="loom_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remain_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period1_pcs" msprop:Generator_ColumnPropNameInRow="remain_period1_pcs" msprop:Generator_ColumnPropNameInTable="remain_period1_pcsColumn" msprop:Generator_UserColumnName="remain_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period1_mtr" msprop:Generator_ColumnPropNameInRow="remain_period1_mtr" msprop:Generator_ColumnPropNameInTable="remain_period1_mtrColumn" msprop:Generator_UserColumnName="remain_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_pcs" msprop:Generator_ColumnPropNameInRow="month1_period1_pcs" msprop:Generator_ColumnPropNameInTable="month1_period1_pcsColumn" msprop:Generator_UserColumnName="month1_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_mtr" msprop:Generator_ColumnPropNameInRow="month1_period1_mtr" msprop:Generator_ColumnPropNameInTable="month1_period1_mtrColumn" msprop:Generator_UserColumnName="month1_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_pcs" msprop:Generator_ColumnPropNameInRow="month2_period1_pcs" msprop:Generator_ColumnPropNameInTable="month2_period1_pcsColumn" msprop:Generator_UserColumnName="month2_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_mtr" msprop:Generator_ColumnPropNameInRow="month2_period1_mtr" msprop:Generator_ColumnPropNameInTable="month2_period1_mtrColumn" msprop:Generator_UserColumnName="month2_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_pcs" msprop:Generator_ColumnPropNameInRow="month3_period1_pcs" msprop:Generator_ColumnPropNameInTable="month3_period1_pcsColumn" msprop:Generator_UserColumnName="month3_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="month1_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth1_work_day" msprop:Generator_ColumnPropNameInRow="month1_work_day" msprop:Generator_ColumnPropNameInTable="month1_work_dayColumn" msprop:Generator_UserColumnName="month1_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth2_work_day" msprop:Generator_ColumnPropNameInRow="month2_work_day" msprop:Generator_ColumnPropNameInTable="month2_work_dayColumn" msprop:Generator_UserColumnName="month2_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth3_work_day" msprop:Generator_ColumnPropNameInRow="month3_work_day" msprop:Generator_ColumnPropNameInTable="month3_work_dayColumn" msprop:Generator_UserColumnName="month3_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_from" msprop:Generator_ColumnVarNameInTable="columnremain_period1_from" msprop:Generator_ColumnPropNameInRow="remain_period1_from" msprop:Generator_ColumnPropNameInTable="remain_period1_fromColumn" msprop:Generator_UserColumnName="remain_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period1_to" msprop:Generator_ColumnVarNameInTable="columnremain_period1_to" msprop:Generator_ColumnPropNameInRow="remain_period1_to" msprop:Generator_ColumnPropNameInTable="remain_period1_toColumn" msprop:Generator_UserColumnName="remain_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_from" msprop:Generator_ColumnVarNameInTable="columnremain_period2_from" msprop:Generator_ColumnPropNameInRow="remain_period2_from" msprop:Generator_ColumnPropNameInTable="remain_period2_fromColumn" msprop:Generator_UserColumnName="remain_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_to" msprop:Generator_ColumnVarNameInTable="columnremain_period2_to" msprop:Generator_ColumnPropNameInRow="remain_period2_to" msprop:Generator_ColumnPropNameInTable="remain_period2_toColumn" msprop:Generator_UserColumnName="remain_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_from" msprop:Generator_ColumnPropNameInRow="month1_period1_from" msprop:Generator_ColumnPropNameInTable="month1_period1_fromColumn" msprop:Generator_UserColumnName="month1_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_to" msprop:Generator_ColumnPropNameInRow="month1_period1_to" msprop:Generator_ColumnPropNameInTable="month1_period1_toColumn" msprop:Generator_UserColumnName="month1_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_from" msprop:Generator_ColumnPropNameInRow="month1_period2_from" msprop:Generator_ColumnPropNameInTable="month1_period2_fromColumn" msprop:Generator_UserColumnName="month1_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_to" msprop:Generator_ColumnPropNameInRow="month1_period2_to" msprop:Generator_ColumnPropNameInTable="month1_period2_toColumn" msprop:Generator_UserColumnName="month1_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_from" msprop:Generator_ColumnPropNameInRow="month2_period1_from" msprop:Generator_ColumnPropNameInTable="month2_period1_fromColumn" msprop:Generator_UserColumnName="month2_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_to" msprop:Generator_ColumnPropNameInRow="month2_period1_to" msprop:Generator_ColumnPropNameInTable="month2_period1_toColumn" msprop:Generator_UserColumnName="month2_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_from" msprop:Generator_ColumnPropNameInRow="month2_period2_from" msprop:Generator_ColumnPropNameInTable="month2_period2_fromColumn" msprop:Generator_UserColumnName="month2_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_to" msprop:Generator_ColumnPropNameInRow="month2_period2_to" msprop:Generator_ColumnPropNameInTable="month2_period2_toColumn" msprop:Generator_UserColumnName="month2_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_from" msprop:Generator_ColumnPropNameInRow="month3_period1_from" msprop:Generator_ColumnPropNameInTable="month3_period1_fromColumn" msprop:Generator_UserColumnName="month3_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_to" msprop:Generator_ColumnPropNameInRow="month3_period1_to" msprop:Generator_ColumnPropNameInTable="month3_period1_toColumn" msprop:Generator_UserColumnName="month3_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_from" msprop:Generator_ColumnPropNameInRow="month3_period2_from" msprop:Generator_ColumnPropNameInTable="month3_period2_fromColumn" msprop:Generator_UserColumnName="month3_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_to" msprop:Generator_ColumnPropNameInRow="month3_period2_to" msprop:Generator_ColumnPropNameInTable="month3_period2_toColumn" msprop:Generator_UserColumnName="month3_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_work_day" msprop:Generator_ColumnVarNameInTable="columnremain_work_day" msprop:Generator_ColumnPropNameInRow="remain_work_day" msprop:Generator_ColumnPropNameInTable="remain_work_dayColumn" msprop:Generator_UserColumnName="remain_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_pcs" msprop:Generator_ColumnPropNameInRow="month3_period2_pcs" msprop:Generator_ColumnPropNameInTable="month3_period2_pcsColumn" msprop:Generator_UserColumnName="month3_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_pcs" msprop:Generator_ColumnPropNameInRow="month2_period2_pcs" msprop:Generator_ColumnPropNameInTable="month2_period2_pcsColumn" msprop:Generator_UserColumnName="month2_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_mtr" msprop:Generator_ColumnPropNameInRow="month2_period2_mtr" msprop:Generator_ColumnPropNameInTable="month2_period2_mtrColumn" msprop:Generator_UserColumnName="month2_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_pcs" msprop:Generator_ColumnPropNameInRow="month1_period2_pcs" msprop:Generator_ColumnPropNameInTable="month1_period2_pcsColumn" msprop:Generator_UserColumnName="month1_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_mtr" msprop:Generator_ColumnPropNameInRow="month1_period2_mtr" msprop:Generator_ColumnPropNameInTable="month1_period2_mtrColumn" msprop:Generator_UserColumnName="month1_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period2_pcs" msprop:Generator_ColumnPropNameInRow="remain_period2_pcs" msprop:Generator_ColumnPropNameInTable="remain_period2_pcsColumn" msprop:Generator_UserColumnName="remain_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period2_mtr" msprop:Generator_ColumnPropNameInRow="remain_period2_mtr" msprop:Generator_ColumnPropNameInTable="remain_period2_mtrColumn" msprop:Generator_UserColumnName="remain_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_mtr" msprop:Generator_ColumnPropNameInRow="month3_period2_mtr" msprop:Generator_ColumnPropNameInTable="month3_period2_mtrColumn" msprop:Generator_UserColumnName="month3_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_mtr" msprop:Generator_ColumnPropNameInRow="month3_period1_mtr" msprop:Generator_ColumnPropNameInTable="month3_period1_mtrColumn" msprop:Generator_UserColumnName="month3_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="length_gr" msprop:Generator_ColumnVarNameInTable="columnlength_gr" msprop:Generator_ColumnPropNameInRow="length_gr" msprop:Generator_ColumnPropNameInTable="length_grColumn" msprop:Generator_UserColumnName="length_gr" type="xs:decimal" />
+              <xs:element name="warp_ln" msprop:Generator_ColumnVarNameInTable="columnwarp_ln" msprop:Generator_ColumnPropNameInRow="warp_ln" msprop:Generator_ColumnPropNameInTable="warp_lnColumn" msprop:Generator_UserColumnName="warp_ln" type="xs:decimal" />
+              <xs:element name="sizer_F" msprop:Generator_ColumnVarNameInTable="columnsizer_F" msprop:Generator_ColumnPropNameInRow="sizer_F" msprop:Generator_ColumnPropNameInTable="sizer_FColumn" msprop:Generator_UserColumnName="sizer_F" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="FlagType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlagType" msprop:Generator_ColumnPropNameInRow="FlagType" msprop:Generator_ColumnPropNameInTable="FlagTypeColumn" msprop:Generator_UserColumnName="FlagType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DSBeamer1" msprop:Generator_TableClassName="DSBeamer1DataTable" msprop:Generator_TableVarName="tableDSBeamer1" msprop:Generator_TablePropName="DSBeamer1" msprop:Generator_RowDeletingName="DSBeamer1RowDeleting" msprop:Generator_RowChangingName="DSBeamer1RowChanging" msprop:Generator_RowEvHandlerName="DSBeamer1RowChangeEventHandler" msprop:Generator_RowDeletedName="DSBeamer1RowDeleted" msprop:Generator_UserTableName="DSBeamer1" msprop:Generator_RowChangedName="DSBeamer1RowChanged" msprop:Generator_RowEvArgName="DSBeamer1RowChangeEvent" msprop:Generator_RowClassName="DSBeamer1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loom_model" msprop:Generator_ColumnVarNameInTable="columnloom_model" msprop:Generator_ColumnPropNameInRow="loom_model" msprop:Generator_ColumnPropNameInTable="loom_modelColumn" msprop:Generator_UserColumnName="loom_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remain_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period1_pcs" msprop:Generator_ColumnPropNameInRow="remain_period1_pcs" msprop:Generator_ColumnPropNameInTable="remain_period1_pcsColumn" msprop:Generator_UserColumnName="remain_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period1_mtr" msprop:Generator_ColumnPropNameInRow="remain_period1_mtr" msprop:Generator_ColumnPropNameInTable="remain_period1_mtrColumn" msprop:Generator_UserColumnName="remain_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_pcs" msprop:Generator_ColumnPropNameInRow="month1_period1_pcs" msprop:Generator_ColumnPropNameInTable="month1_period1_pcsColumn" msprop:Generator_UserColumnName="month1_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_mtr" msprop:Generator_ColumnPropNameInRow="month1_period1_mtr" msprop:Generator_ColumnPropNameInTable="month1_period1_mtrColumn" msprop:Generator_UserColumnName="month1_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_pcs" msprop:Generator_ColumnPropNameInRow="month2_period1_pcs" msprop:Generator_ColumnPropNameInTable="month2_period1_pcsColumn" msprop:Generator_UserColumnName="month2_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_mtr" msprop:Generator_ColumnPropNameInRow="month2_period1_mtr" msprop:Generator_ColumnPropNameInTable="month2_period1_mtrColumn" msprop:Generator_UserColumnName="month2_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_pcs" msprop:Generator_ColumnPropNameInRow="month3_period1_pcs" msprop:Generator_ColumnPropNameInTable="month3_period1_pcsColumn" msprop:Generator_UserColumnName="month3_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="month1_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth1_work_day" msprop:Generator_ColumnPropNameInRow="month1_work_day" msprop:Generator_ColumnPropNameInTable="month1_work_dayColumn" msprop:Generator_UserColumnName="month1_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth2_work_day" msprop:Generator_ColumnPropNameInRow="month2_work_day" msprop:Generator_ColumnPropNameInTable="month2_work_dayColumn" msprop:Generator_UserColumnName="month2_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth3_work_day" msprop:Generator_ColumnPropNameInRow="month3_work_day" msprop:Generator_ColumnPropNameInTable="month3_work_dayColumn" msprop:Generator_UserColumnName="month3_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_from" msprop:Generator_ColumnVarNameInTable="columnremain_period1_from" msprop:Generator_ColumnPropNameInRow="remain_period1_from" msprop:Generator_ColumnPropNameInTable="remain_period1_fromColumn" msprop:Generator_UserColumnName="remain_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period1_to" msprop:Generator_ColumnVarNameInTable="columnremain_period1_to" msprop:Generator_ColumnPropNameInRow="remain_period1_to" msprop:Generator_ColumnPropNameInTable="remain_period1_toColumn" msprop:Generator_UserColumnName="remain_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_from" msprop:Generator_ColumnVarNameInTable="columnremain_period2_from" msprop:Generator_ColumnPropNameInRow="remain_period2_from" msprop:Generator_ColumnPropNameInTable="remain_period2_fromColumn" msprop:Generator_UserColumnName="remain_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_to" msprop:Generator_ColumnVarNameInTable="columnremain_period2_to" msprop:Generator_ColumnPropNameInRow="remain_period2_to" msprop:Generator_ColumnPropNameInTable="remain_period2_toColumn" msprop:Generator_UserColumnName="remain_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_from" msprop:Generator_ColumnPropNameInRow="month1_period1_from" msprop:Generator_ColumnPropNameInTable="month1_period1_fromColumn" msprop:Generator_UserColumnName="month1_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_to" msprop:Generator_ColumnPropNameInRow="month1_period1_to" msprop:Generator_ColumnPropNameInTable="month1_period1_toColumn" msprop:Generator_UserColumnName="month1_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_from" msprop:Generator_ColumnPropNameInRow="month1_period2_from" msprop:Generator_ColumnPropNameInTable="month1_period2_fromColumn" msprop:Generator_UserColumnName="month1_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_to" msprop:Generator_ColumnPropNameInRow="month1_period2_to" msprop:Generator_ColumnPropNameInTable="month1_period2_toColumn" msprop:Generator_UserColumnName="month1_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_from" msprop:Generator_ColumnPropNameInRow="month2_period1_from" msprop:Generator_ColumnPropNameInTable="month2_period1_fromColumn" msprop:Generator_UserColumnName="month2_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_to" msprop:Generator_ColumnPropNameInRow="month2_period1_to" msprop:Generator_ColumnPropNameInTable="month2_period1_toColumn" msprop:Generator_UserColumnName="month2_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_from" msprop:Generator_ColumnPropNameInRow="month2_period2_from" msprop:Generator_ColumnPropNameInTable="month2_period2_fromColumn" msprop:Generator_UserColumnName="month2_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_to" msprop:Generator_ColumnPropNameInRow="month2_period2_to" msprop:Generator_ColumnPropNameInTable="month2_period2_toColumn" msprop:Generator_UserColumnName="month2_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_from" msprop:Generator_ColumnPropNameInRow="month3_period1_from" msprop:Generator_ColumnPropNameInTable="month3_period1_fromColumn" msprop:Generator_UserColumnName="month3_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_to" msprop:Generator_ColumnPropNameInRow="month3_period1_to" msprop:Generator_ColumnPropNameInTable="month3_period1_toColumn" msprop:Generator_UserColumnName="month3_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_from" msprop:Generator_ColumnPropNameInRow="month3_period2_from" msprop:Generator_ColumnPropNameInTable="month3_period2_fromColumn" msprop:Generator_UserColumnName="month3_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_to" msprop:Generator_ColumnPropNameInRow="month3_period2_to" msprop:Generator_ColumnPropNameInTable="month3_period2_toColumn" msprop:Generator_UserColumnName="month3_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_work_day" msprop:Generator_ColumnVarNameInTable="columnremain_work_day" msprop:Generator_ColumnPropNameInRow="remain_work_day" msprop:Generator_ColumnPropNameInTable="remain_work_dayColumn" msprop:Generator_UserColumnName="remain_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_pcs" msprop:Generator_ColumnPropNameInRow="month3_period2_pcs" msprop:Generator_ColumnPropNameInTable="month3_period2_pcsColumn" msprop:Generator_UserColumnName="month3_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_pcs" msprop:Generator_ColumnPropNameInRow="month2_period2_pcs" msprop:Generator_ColumnPropNameInTable="month2_period2_pcsColumn" msprop:Generator_UserColumnName="month2_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_mtr" msprop:Generator_ColumnPropNameInRow="month2_period2_mtr" msprop:Generator_ColumnPropNameInTable="month2_period2_mtrColumn" msprop:Generator_UserColumnName="month2_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_pcs" msprop:Generator_ColumnPropNameInRow="month1_period2_pcs" msprop:Generator_ColumnPropNameInTable="month1_period2_pcsColumn" msprop:Generator_UserColumnName="month1_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_mtr" msprop:Generator_ColumnPropNameInRow="month1_period2_mtr" msprop:Generator_ColumnPropNameInTable="month1_period2_mtrColumn" msprop:Generator_UserColumnName="month1_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period2_pcs" msprop:Generator_ColumnPropNameInRow="remain_period2_pcs" msprop:Generator_ColumnPropNameInTable="remain_period2_pcsColumn" msprop:Generator_UserColumnName="remain_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period2_mtr" msprop:Generator_ColumnPropNameInRow="remain_period2_mtr" msprop:Generator_ColumnPropNameInTable="remain_period2_mtrColumn" msprop:Generator_UserColumnName="remain_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_mtr" msprop:Generator_ColumnPropNameInRow="month3_period2_mtr" msprop:Generator_ColumnPropNameInTable="month3_period2_mtrColumn" msprop:Generator_UserColumnName="month3_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_mtr" msprop:Generator_ColumnPropNameInRow="month3_period1_mtr" msprop:Generator_ColumnPropNameInTable="month3_period1_mtrColumn" msprop:Generator_UserColumnName="month3_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="length_gr" msprop:Generator_ColumnVarNameInTable="columnlength_gr" msprop:Generator_ColumnPropNameInRow="length_gr" msprop:Generator_ColumnPropNameInTable="length_grColumn" msprop:Generator_UserColumnName="length_gr" type="xs:decimal" />
+              <xs:element name="FlagID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlagID" msprop:Generator_ColumnPropNameInRow="FlagID" msprop:Generator_ColumnPropNameInTable="FlagIDColumn" msprop:Generator_UserColumnName="FlagID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="warp_ln" msprop:Generator_ColumnVarNameInTable="columnwarp_ln" msprop:Generator_ColumnPropNameInRow="warp_ln" msprop:Generator_ColumnPropNameInTable="warp_lnColumn" msprop:Generator_UserColumnName="warp_ln" type="xs:decimal" />
+              <xs:element name="sizer_F" msprop:Generator_ColumnVarNameInTable="columnsizer_F" msprop:Generator_ColumnPropNameInRow="sizer_F" msprop:Generator_ColumnPropNameInTable="sizer_FColumn" msprop:Generator_UserColumnName="sizer_F" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="FlagType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlagType" msprop:Generator_ColumnPropNameInRow="FlagType" msprop:Generator_ColumnPropNameInTable="FlagTypeColumn" msprop:Generator_UserColumnName="FlagType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prep_mc_type" msprop:Generator_ColumnVarNameInTable="columnprep_mc_type" msprop:Generator_ColumnPropNameInRow="prep_mc_type" msprop:Generator_ColumnPropNameInTable="prep_mc_typeColumn" msprop:Generator_UserColumnName="prep_mc_type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prep_mc_capacity" msprop:Generator_ColumnVarNameInTable="columnprep_mc_capacity" msprop:Generator_ColumnPropNameInRow="prep_mc_capacity" msprop:Generator_ColumnPropNameInTable="prep_mc_capacityColumn" msprop:Generator_UserColumnName="prep_mc_capacity" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DTPrepMachineS" msprop:Generator_TableClassName="DTPrepMachineSDataTable" msprop:Generator_TableVarName="tableDTPrepMachineS" msprop:Generator_RowChangedName="DTPrepMachineSRowChanged" msprop:Generator_TablePropName="DTPrepMachineS" msprop:Generator_RowDeletingName="DTPrepMachineSRowDeleting" msprop:Generator_RowChangingName="DTPrepMachineSRowChanging" msprop:Generator_RowEvHandlerName="DTPrepMachineSRowChangeEventHandler" msprop:Generator_RowDeletedName="DTPrepMachineSRowDeleted" msprop:Generator_RowClassName="DTPrepMachineSRow" msprop:Generator_UserTableName="DTPrepMachineS" msprop:Generator_RowEvArgName="DTPrepMachineSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prep_mc_no" msprop:Generator_ColumnVarNameInTable="columnprep_mc_no" msprop:Generator_ColumnPropNameInRow="prep_mc_no" msprop:Generator_ColumnPropNameInTable="prep_mc_noColumn" msprop:Generator_UserColumnName="prep_mc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="prep_mc_type" msprop:Generator_ColumnVarNameInTable="columnprep_mc_type" msprop:Generator_ColumnPropNameInRow="prep_mc_type" msprop:Generator_ColumnPropNameInTable="prep_mc_typeColumn" msprop:Generator_UserColumnName="prep_mc_type" type="xs:string" minOccurs="0" />
+              <xs:element name="prep_mc_capacity" msprop:Generator_ColumnVarNameInTable="columnprep_mc_capacity" msprop:Generator_ColumnPropNameInRow="prep_mc_capacity" msprop:Generator_ColumnPropNameInTable="prep_mc_capacityColumn" msprop:Generator_UserColumnName="prep_mc_capacity" type="xs:double" minOccurs="0" />
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DTPrepMachineB" msprop:Generator_TableClassName="DTPrepMachineBDataTable" msprop:Generator_TableVarName="tableDTPrepMachineB" msprop:Generator_TablePropName="DTPrepMachineB" msprop:Generator_RowDeletingName="DTPrepMachineBRowDeleting" msprop:Generator_RowChangingName="DTPrepMachineBRowChanging" msprop:Generator_RowEvHandlerName="DTPrepMachineBRowChangeEventHandler" msprop:Generator_RowDeletedName="DTPrepMachineBRowDeleted" msprop:Generator_UserTableName="DTPrepMachineB" msprop:Generator_RowChangedName="DTPrepMachineBRowChanged" msprop:Generator_RowEvArgName="DTPrepMachineBRowChangeEvent" msprop:Generator_RowClassName="DTPrepMachineBRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prep_mc_no" msprop:Generator_ColumnVarNameInTable="columnprep_mc_no" msprop:Generator_ColumnPropNameInRow="prep_mc_no" msprop:Generator_ColumnPropNameInTable="prep_mc_noColumn" msprop:Generator_UserColumnName="prep_mc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="prep_mc_type" msprop:Generator_ColumnVarNameInTable="columnprep_mc_type" msprop:Generator_ColumnPropNameInRow="prep_mc_type" msprop:Generator_ColumnPropNameInTable="prep_mc_typeColumn" msprop:Generator_UserColumnName="prep_mc_type" type="xs:string" minOccurs="0" />
+              <xs:element name="prep_mc_capacity" msprop:Generator_ColumnVarNameInTable="columnprep_mc_capacity" msprop:Generator_ColumnPropNameInRow="prep_mc_capacity" msprop:Generator_ColumnPropNameInTable="prep_mc_capacityColumn" msprop:Generator_UserColumnName="prep_mc_capacity" type="xs:double" minOccurs="0" />
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DSBeamer" msprop:Generator_TableClassName="DSBeamerDataTable" msprop:Generator_TableVarName="tableDSBeamer" msprop:Generator_TablePropName="DSBeamer" msprop:Generator_RowDeletingName="DSBeamerRowDeleting" msprop:Generator_RowChangingName="DSBeamerRowChanging" msprop:Generator_RowEvHandlerName="DSBeamerRowChangeEventHandler" msprop:Generator_RowDeletedName="DSBeamerRowDeleted" msprop:Generator_UserTableName="DSBeamer" msprop:Generator_RowChangedName="DSBeamerRowChanged" msprop:Generator_RowEvArgName="DSBeamerRowChangeEvent" msprop:Generator_RowClassName="DSBeamerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loom_model" msprop:Generator_ColumnVarNameInTable="columnloom_model" msprop:Generator_ColumnPropNameInRow="loom_model" msprop:Generator_ColumnPropNameInTable="loom_modelColumn" msprop:Generator_UserColumnName="loom_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remain_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period1_pcs" msprop:Generator_ColumnPropNameInRow="remain_period1_pcs" msprop:Generator_ColumnPropNameInTable="remain_period1_pcsColumn" msprop:Generator_UserColumnName="remain_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period1_mtr" msprop:Generator_ColumnPropNameInRow="remain_period1_mtr" msprop:Generator_ColumnPropNameInTable="remain_period1_mtrColumn" msprop:Generator_UserColumnName="remain_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_pcs" msprop:Generator_ColumnPropNameInRow="month1_period1_pcs" msprop:Generator_ColumnPropNameInTable="month1_period1_pcsColumn" msprop:Generator_UserColumnName="month1_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_mtr" msprop:Generator_ColumnPropNameInRow="month1_period1_mtr" msprop:Generator_ColumnPropNameInTable="month1_period1_mtrColumn" msprop:Generator_UserColumnName="month1_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_pcs" msprop:Generator_ColumnPropNameInRow="month2_period1_pcs" msprop:Generator_ColumnPropNameInTable="month2_period1_pcsColumn" msprop:Generator_UserColumnName="month2_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_mtr" msprop:Generator_ColumnPropNameInRow="month2_period1_mtr" msprop:Generator_ColumnPropNameInTable="month2_period1_mtrColumn" msprop:Generator_UserColumnName="month2_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_pcs" msprop:Generator_ColumnPropNameInRow="month3_period1_pcs" msprop:Generator_ColumnPropNameInTable="month3_period1_pcsColumn" msprop:Generator_UserColumnName="month3_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="month1_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth1_work_day" msprop:Generator_ColumnPropNameInRow="month1_work_day" msprop:Generator_ColumnPropNameInTable="month1_work_dayColumn" msprop:Generator_UserColumnName="month1_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth2_work_day" msprop:Generator_ColumnPropNameInRow="month2_work_day" msprop:Generator_ColumnPropNameInTable="month2_work_dayColumn" msprop:Generator_UserColumnName="month2_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth3_work_day" msprop:Generator_ColumnPropNameInRow="month3_work_day" msprop:Generator_ColumnPropNameInTable="month3_work_dayColumn" msprop:Generator_UserColumnName="month3_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_from" msprop:Generator_ColumnVarNameInTable="columnremain_period1_from" msprop:Generator_ColumnPropNameInRow="remain_period1_from" msprop:Generator_ColumnPropNameInTable="remain_period1_fromColumn" msprop:Generator_UserColumnName="remain_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period1_to" msprop:Generator_ColumnVarNameInTable="columnremain_period1_to" msprop:Generator_ColumnPropNameInRow="remain_period1_to" msprop:Generator_ColumnPropNameInTable="remain_period1_toColumn" msprop:Generator_UserColumnName="remain_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_from" msprop:Generator_ColumnVarNameInTable="columnremain_period2_from" msprop:Generator_ColumnPropNameInRow="remain_period2_from" msprop:Generator_ColumnPropNameInTable="remain_period2_fromColumn" msprop:Generator_UserColumnName="remain_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_to" msprop:Generator_ColumnVarNameInTable="columnremain_period2_to" msprop:Generator_ColumnPropNameInRow="remain_period2_to" msprop:Generator_ColumnPropNameInTable="remain_period2_toColumn" msprop:Generator_UserColumnName="remain_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_from" msprop:Generator_ColumnPropNameInRow="month1_period1_from" msprop:Generator_ColumnPropNameInTable="month1_period1_fromColumn" msprop:Generator_UserColumnName="month1_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_to" msprop:Generator_ColumnPropNameInRow="month1_period1_to" msprop:Generator_ColumnPropNameInTable="month1_period1_toColumn" msprop:Generator_UserColumnName="month1_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_from" msprop:Generator_ColumnPropNameInRow="month1_period2_from" msprop:Generator_ColumnPropNameInTable="month1_period2_fromColumn" msprop:Generator_UserColumnName="month1_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_to" msprop:Generator_ColumnPropNameInRow="month1_period2_to" msprop:Generator_ColumnPropNameInTable="month1_period2_toColumn" msprop:Generator_UserColumnName="month1_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_from" msprop:Generator_ColumnPropNameInRow="month2_period1_from" msprop:Generator_ColumnPropNameInTable="month2_period1_fromColumn" msprop:Generator_UserColumnName="month2_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_to" msprop:Generator_ColumnPropNameInRow="month2_period1_to" msprop:Generator_ColumnPropNameInTable="month2_period1_toColumn" msprop:Generator_UserColumnName="month2_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_from" msprop:Generator_ColumnPropNameInRow="month2_period2_from" msprop:Generator_ColumnPropNameInTable="month2_period2_fromColumn" msprop:Generator_UserColumnName="month2_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_to" msprop:Generator_ColumnPropNameInRow="month2_period2_to" msprop:Generator_ColumnPropNameInTable="month2_period2_toColumn" msprop:Generator_UserColumnName="month2_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_from" msprop:Generator_ColumnPropNameInRow="month3_period1_from" msprop:Generator_ColumnPropNameInTable="month3_period1_fromColumn" msprop:Generator_UserColumnName="month3_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_to" msprop:Generator_ColumnPropNameInRow="month3_period1_to" msprop:Generator_ColumnPropNameInTable="month3_period1_toColumn" msprop:Generator_UserColumnName="month3_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_from" msprop:Generator_ColumnPropNameInRow="month3_period2_from" msprop:Generator_ColumnPropNameInTable="month3_period2_fromColumn" msprop:Generator_UserColumnName="month3_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_to" msprop:Generator_ColumnPropNameInRow="month3_period2_to" msprop:Generator_ColumnPropNameInTable="month3_period2_toColumn" msprop:Generator_UserColumnName="month3_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_work_day" msprop:Generator_ColumnVarNameInTable="columnremain_work_day" msprop:Generator_ColumnPropNameInRow="remain_work_day" msprop:Generator_ColumnPropNameInTable="remain_work_dayColumn" msprop:Generator_UserColumnName="remain_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_pcs" msprop:Generator_ColumnPropNameInRow="month3_period2_pcs" msprop:Generator_ColumnPropNameInTable="month3_period2_pcsColumn" msprop:Generator_UserColumnName="month3_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_pcs" msprop:Generator_ColumnPropNameInRow="month2_period2_pcs" msprop:Generator_ColumnPropNameInTable="month2_period2_pcsColumn" msprop:Generator_UserColumnName="month2_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_mtr" msprop:Generator_ColumnPropNameInRow="month2_period2_mtr" msprop:Generator_ColumnPropNameInTable="month2_period2_mtrColumn" msprop:Generator_UserColumnName="month2_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_pcs" msprop:Generator_ColumnPropNameInRow="month1_period2_pcs" msprop:Generator_ColumnPropNameInTable="month1_period2_pcsColumn" msprop:Generator_UserColumnName="month1_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_mtr" msprop:Generator_ColumnPropNameInRow="month1_period2_mtr" msprop:Generator_ColumnPropNameInTable="month1_period2_mtrColumn" msprop:Generator_UserColumnName="month1_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period2_pcs" msprop:Generator_ColumnPropNameInRow="remain_period2_pcs" msprop:Generator_ColumnPropNameInTable="remain_period2_pcsColumn" msprop:Generator_UserColumnName="remain_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period2_mtr" msprop:Generator_ColumnPropNameInRow="remain_period2_mtr" msprop:Generator_ColumnPropNameInTable="remain_period2_mtrColumn" msprop:Generator_UserColumnName="remain_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_mtr" msprop:Generator_ColumnPropNameInRow="month3_period2_mtr" msprop:Generator_ColumnPropNameInTable="month3_period2_mtrColumn" msprop:Generator_UserColumnName="month3_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_mtr" msprop:Generator_ColumnPropNameInRow="month3_period1_mtr" msprop:Generator_ColumnPropNameInTable="month3_period1_mtrColumn" msprop:Generator_UserColumnName="month3_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="length_gr" msprop:Generator_ColumnVarNameInTable="columnlength_gr" msprop:Generator_ColumnPropNameInRow="length_gr" msprop:Generator_ColumnPropNameInTable="length_grColumn" msprop:Generator_UserColumnName="length_gr" type="xs:decimal" />
+              <xs:element name="warp_ln" msprop:Generator_ColumnVarNameInTable="columnwarp_ln" msprop:Generator_ColumnPropNameInRow="warp_ln" msprop:Generator_ColumnPropNameInTable="warp_lnColumn" msprop:Generator_UserColumnName="warp_ln" type="xs:decimal" />
+              <xs:element name="sizer_F" msprop:Generator_ColumnVarNameInTable="columnsizer_F" msprop:Generator_ColumnPropNameInRow="sizer_F" msprop:Generator_ColumnPropNameInTable="sizer_FColumn" msprop:Generator_UserColumnName="sizer_F" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="FlagType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlagType" msprop:Generator_ColumnPropNameInRow="FlagType" msprop:Generator_ColumnPropNameInTable="FlagTypeColumn" msprop:Generator_UserColumnName="FlagType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DTHeaderPlan" msprop:Generator_TableClassName="DTHeaderPlanDataTable" msprop:Generator_TableVarName="tableDTHeaderPlan" msprop:Generator_TablePropName="DTHeaderPlan" msprop:Generator_RowDeletingName="DTHeaderPlanRowDeleting" msprop:Generator_RowChangingName="DTHeaderPlanRowChanging" msprop:Generator_RowEvHandlerName="DTHeaderPlanRowChangeEventHandler" msprop:Generator_RowDeletedName="DTHeaderPlanRowDeleted" msprop:Generator_UserTableName="DTHeaderPlan" msprop:Generator_RowChangedName="DTHeaderPlanRowChanged" msprop:Generator_RowEvArgName="DTHeaderPlanRowChangeEvent" msprop:Generator_RowClassName="DTHeaderPlanRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DTSizerBeamer" />
+      <xs:field xpath="mstns:Expr2" />
+    </xs:unique>
+    <xs:unique name="DSSizer1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DSSizer1" />
+      <xs:field xpath="mstns:Expr2" />
+    </xs:unique>
+    <xs:unique name="DSBeamer1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DSBeamer1" />
+      <xs:field xpath="mstns:Expr2" />
+    </xs:unique>
+    <xs:unique name="DSBeamer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DSBeamer" />
+      <xs:field xpath="mstns:Expr2" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

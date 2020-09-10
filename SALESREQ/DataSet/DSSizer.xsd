@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSSizer" targetNamespace="http://tempuri.org/DSSizer.xsd" xmlns:mstns="http://tempuri.org/DSSizer.xsd" xmlns="http://tempuri.org/DSSizer.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="istem_smsConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="istem_smsConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.istem_smsConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DTSizerTableAdapter" GeneratorDataComponentClassName="DTSizerTableAdapter" Name="DTSizer" UserDataComponentName="DTSizerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.remain_period1_mtr, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs, wv_prod_plan_header.plan_month AS Expr2, 
+                         wv_prod_plan_header.month1_work_day, wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, 
+                         wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.month1_period1_from, wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, 
+                         wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, 
+                         wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, wv_prod_plan_header.month3_period2_to, wv_prod_plan_header.remain_work_day, 
+                         wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month1_period2_mtr, 
+                         wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, wv_fabric_analysis_master.length_gr, 
+                         wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, CASE WHEN (wv_fabric_analysis_master.sizer_F) = 1 THEN 'S' WHEN (wv_fabric_analysis_master.sizer_F) &lt;&gt; 1 THEN 'B' END AS FlagType
+FROM            wv_prod_plan_detail3 INNER JOIN
+                         wv_prod_plan_header ON wv_prod_plan_detail3.plan_month = wv_prod_plan_header.plan_month INNER JOIN
+                         wv_fabric_analysis_master ON wv_prod_plan_detail3.grey_no = wv_fabric_analysis_master.grey_no CROSS JOIN
+                         wv_prep_machine_master
+WHERE        (wv_fabric_analysis_master.sizer_F = '1')
+GROUP BY wv_prod_plan_header.plan_month, wv_prod_plan_header.remain_period2_from, wv_prod_plan_header.remain_period2_to, wv_prod_plan_header.remain_work_day, wv_prod_plan_header.month1_work_day, 
+                         wv_prod_plan_header.month2_work_day, wv_prod_plan_header.month3_work_day, wv_prod_plan_header.remain_period1_from, wv_prod_plan_header.remain_period1_to, wv_prod_plan_header.month1_period1_from, 
+                         wv_prod_plan_header.month1_period1_to, wv_prod_plan_header.month1_period2_from, wv_prod_plan_header.month1_period2_to, wv_prod_plan_header.month2_period1_from, wv_prod_plan_header.month2_period1_to, 
+                         wv_prod_plan_header.month2_period2_from, wv_prod_plan_header.month2_period2_to, wv_prod_plan_header.month3_period1_from, wv_prod_plan_header.month3_period1_to, wv_prod_plan_header.month3_period2_from, 
+                         wv_prod_plan_header.month3_period2_to, wv_prod_plan_detail3.grey_no, wv_prod_plan_detail3.loom_model, wv_prod_plan_detail3.remain_period1_pcs, wv_prod_plan_detail3.month1_period1_pcs, 
+                         wv_prod_plan_detail3.month1_period2_pcs, wv_prod_plan_detail3.month2_period2_pcs, wv_prod_plan_detail3.month3_period2_pcs, wv_prod_plan_detail3.month2_period2_mtr, wv_prod_plan_detail3.remain_period1_mtr, 
+                         wv_prod_plan_detail3.month1_period2_mtr, wv_prod_plan_detail3.remain_period2_pcs, wv_prod_plan_detail3.remain_period2_mtr, wv_prod_plan_detail3.month3_period2_mtr, wv_prod_plan_detail3.month3_period1_mtr, 
+                         wv_fabric_analysis_master.length_gr, wv_fabric_analysis_master.warp_ln, wv_fabric_analysis_master.sizer_F, wv_prod_plan_detail3.month1_period1_mtr, wv_prod_plan_detail3.month2_period1_pcs, 
+                         wv_prod_plan_detail3.month2_period1_mtr, wv_prod_plan_detail3.month3_period1_pcs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grey_no" DataSetColumn="grey_no" />
+              <Mapping SourceColumn="loom_model" DataSetColumn="loom_model" />
+              <Mapping SourceColumn="remain_period1_pcs" DataSetColumn="remain_period1_pcs" />
+              <Mapping SourceColumn="remain_period1_mtr" DataSetColumn="remain_period1_mtr" />
+              <Mapping SourceColumn="month1_period1_pcs" DataSetColumn="month1_period1_pcs" />
+              <Mapping SourceColumn="month1_period1_mtr" DataSetColumn="month1_period1_mtr" />
+              <Mapping SourceColumn="month2_period1_pcs" DataSetColumn="month2_period1_pcs" />
+              <Mapping SourceColumn="month2_period1_mtr" DataSetColumn="month2_period1_mtr" />
+              <Mapping SourceColumn="month3_period1_pcs" DataSetColumn="month3_period1_pcs" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="month1_work_day" DataSetColumn="month1_work_day" />
+              <Mapping SourceColumn="month2_work_day" DataSetColumn="month2_work_day" />
+              <Mapping SourceColumn="month3_work_day" DataSetColumn="month3_work_day" />
+              <Mapping SourceColumn="remain_period1_from" DataSetColumn="remain_period1_from" />
+              <Mapping SourceColumn="remain_period1_to" DataSetColumn="remain_period1_to" />
+              <Mapping SourceColumn="remain_period2_from" DataSetColumn="remain_period2_from" />
+              <Mapping SourceColumn="remain_period2_to" DataSetColumn="remain_period2_to" />
+              <Mapping SourceColumn="month1_period1_from" DataSetColumn="month1_period1_from" />
+              <Mapping SourceColumn="month1_period1_to" DataSetColumn="month1_period1_to" />
+              <Mapping SourceColumn="month1_period2_from" DataSetColumn="month1_period2_from" />
+              <Mapping SourceColumn="month1_period2_to" DataSetColumn="month1_period2_to" />
+              <Mapping SourceColumn="month2_period1_from" DataSetColumn="month2_period1_from" />
+              <Mapping SourceColumn="month2_period1_to" DataSetColumn="month2_period1_to" />
+              <Mapping SourceColumn="month2_period2_from" DataSetColumn="month2_period2_from" />
+              <Mapping SourceColumn="month2_period2_to" DataSetColumn="month2_period2_to" />
+              <Mapping SourceColumn="month3_period1_from" DataSetColumn="month3_period1_from" />
+              <Mapping SourceColumn="month3_period1_to" DataSetColumn="month3_period1_to" />
+              <Mapping SourceColumn="month3_period2_from" DataSetColumn="month3_period2_from" />
+              <Mapping SourceColumn="month3_period2_to" DataSetColumn="month3_period2_to" />
+              <Mapping SourceColumn="remain_work_day" DataSetColumn="remain_work_day" />
+              <Mapping SourceColumn="month3_period2_pcs" DataSetColumn="month3_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_pcs" DataSetColumn="month2_period2_pcs" />
+              <Mapping SourceColumn="month2_period2_mtr" DataSetColumn="month2_period2_mtr" />
+              <Mapping SourceColumn="month1_period2_pcs" DataSetColumn="month1_period2_pcs" />
+              <Mapping SourceColumn="month1_period2_mtr" DataSetColumn="month1_period2_mtr" />
+              <Mapping SourceColumn="remain_period2_pcs" DataSetColumn="remain_period2_pcs" />
+              <Mapping SourceColumn="remain_period2_mtr" DataSetColumn="remain_period2_mtr" />
+              <Mapping SourceColumn="month3_period2_mtr" DataSetColumn="month3_period2_mtr" />
+              <Mapping SourceColumn="month3_period1_mtr" DataSetColumn="month3_period1_mtr" />
+              <Mapping SourceColumn="length_gr" DataSetColumn="length_gr" />
+              <Mapping SourceColumn="FlagType" DataSetColumn="FlagType" />
+              <Mapping SourceColumn="warp_ln" DataSetColumn="warp_ln" />
+              <Mapping SourceColumn="sizer_F" DataSetColumn="sizer_F" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wv_prep_machine_masterTableAdapter" GeneratorDataComponentClassName="wv_prep_machine_masterTableAdapter" Name="wv_prep_machine_master" UserDataComponentName="wv_prep_machine_masterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectName="istem_sms.dbo.wv_prep_machine_master" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [wv_prep_machine_master] WHERE (([prep_mc_no] = @Original_prep_mc_no) AND ([prep_mc_type] = @Original_prep_mc_type) AND ((@IsNull_prep_mc_capacity = 1 AND [prep_mc_capacity] IS NULL) OR ([prep_mc_capacity] = @Original_prep_mc_capacity)) AND ((@IsNull_prep_mc_eff = 1 AND [prep_mc_eff] IS NULL) OR ([prep_mc_eff] = @Original_prep_mc_eff)) AND ((@IsNull_act_rec = 1 AND [act_rec] IS NULL) OR ([act_rec] = @Original_act_rec)) AND ((@IsNull_rec_sts = 1 AND [rec_sts] IS NULL) OR ([rec_sts] = @Original_rec_sts)) AND ((@IsNull_proc_no = 1 AND [proc_no] IS NULL) OR ([proc_no] = @Original_proc_no)) AND ((@IsNull_upd_date = 1 AND [upd_date] IS NULL) OR ([upd_date] = @Original_upd_date)) AND ((@IsNull_upd_time = 1 AND [upd_time] IS NULL) OR ([upd_time] = @Original_upd_time)) AND ((@IsNull_user_id = 1 AND [user_id] IS NULL) OR ([user_id] = @Original_user_id)) AND ((@IsNull_client_ip = 1 AND [client_ip] IS NULL) OR ([client_ip] = @Original_client_ip)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_prep_mc_no" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="prep_mc_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_prep_mc_type" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prep_mc_type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_prep_mc_capacity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="prep_mc_capacity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_prep_mc_capacity" Precision="6" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="prep_mc_capacity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_prep_mc_eff" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="prep_mc_eff" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_prep_mc_eff" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="prep_mc_eff" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_act_rec" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="act_rec" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_act_rec" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="act_rec" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rec_sts" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rec_sts" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_rec_sts" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="rec_sts" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_proc_no" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="proc_no" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_proc_no" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="proc_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_upd_date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="upd_date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_upd_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="upd_date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_upd_time" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="upd_time" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_upd_time" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="upd_time" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_user_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="user_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_user_id" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="user_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_client_ip" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="client_ip" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_client_ip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="client_ip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [wv_prep_machine_master] ([prep_mc_no], [prep_mc_type], [prep_mc_capacity], [prep_mc_eff], [act_rec], [rec_sts], [proc_no], [upd_date], [upd_time], [user_id], [client_ip]) VALUES (@prep_mc_no, @prep_mc_type, @prep_mc_capacity, @prep_mc_eff, @act_rec, @rec_sts, @proc_no, @upd_date, @upd_time, @user_id, @client_ip);
+SELECT prep_mc_no, prep_mc_type, prep_mc_capacity, prep_mc_eff, act_rec, rec_sts, proc_no, upd_date, upd_time, user_id, client_ip FROM wv_prep_machine_master WHERE (prep_mc_no = @prep_mc_no)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@prep_mc_no" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="prep_mc_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@prep_mc_type" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prep_mc_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@prep_mc_capacity" Precision="6" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="prep_mc_capacity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@prep_mc_eff" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="prep_mc_eff" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@act_rec" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="act_rec" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@rec_sts" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="rec_sts" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@proc_no" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="proc_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@upd_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="upd_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@upd_time" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="upd_time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@user_id" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="user_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@client_ip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="client_ip" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_prep_machine_master.*
+FROM            wv_prep_machine_master</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [wv_prep_machine_master] SET [prep_mc_no] = @prep_mc_no, [prep_mc_type] = @prep_mc_type, [prep_mc_capacity] = @prep_mc_capacity, [prep_mc_eff] = @prep_mc_eff, [act_rec] = @act_rec, [rec_sts] = @rec_sts, [proc_no] = @proc_no, [upd_date] = @upd_date, [upd_time] = @upd_time, [user_id] = @user_id, [client_ip] = @client_ip WHERE (([prep_mc_no] = @Original_prep_mc_no) AND ([prep_mc_type] = @Original_prep_mc_type) AND ((@IsNull_prep_mc_capacity = 1 AND [prep_mc_capacity] IS NULL) OR ([prep_mc_capacity] = @Original_prep_mc_capacity)) AND ((@IsNull_prep_mc_eff = 1 AND [prep_mc_eff] IS NULL) OR ([prep_mc_eff] = @Original_prep_mc_eff)) AND ((@IsNull_act_rec = 1 AND [act_rec] IS NULL) OR ([act_rec] = @Original_act_rec)) AND ((@IsNull_rec_sts = 1 AND [rec_sts] IS NULL) OR ([rec_sts] = @Original_rec_sts)) AND ((@IsNull_proc_no = 1 AND [proc_no] IS NULL) OR ([proc_no] = @Original_proc_no)) AND ((@IsNull_upd_date = 1 AND [upd_date] IS NULL) OR ([upd_date] = @Original_upd_date)) AND ((@IsNull_upd_time = 1 AND [upd_time] IS NULL) OR ([upd_time] = @Original_upd_time)) AND ((@IsNull_user_id = 1 AND [user_id] IS NULL) OR ([user_id] = @Original_user_id)) AND ((@IsNull_client_ip = 1 AND [client_ip] IS NULL) OR ([client_ip] = @Original_client_ip)));
+SELECT prep_mc_no, prep_mc_type, prep_mc_capacity, prep_mc_eff, act_rec, rec_sts, proc_no, upd_date, upd_time, user_id, client_ip FROM wv_prep_machine_master WHERE (prep_mc_no = @prep_mc_no)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@prep_mc_no" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="prep_mc_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@prep_mc_type" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prep_mc_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@prep_mc_capacity" Precision="6" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="prep_mc_capacity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@prep_mc_eff" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="prep_mc_eff" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@act_rec" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="act_rec" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@rec_sts" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="rec_sts" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@proc_no" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="proc_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@upd_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="upd_date" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@upd_time" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="upd_time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@user_id" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="user_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@client_ip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="client_ip" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_prep_mc_no" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="prep_mc_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_prep_mc_type" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="prep_mc_type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_prep_mc_capacity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="prep_mc_capacity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_prep_mc_capacity" Precision="6" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="prep_mc_capacity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_prep_mc_eff" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="prep_mc_eff" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_prep_mc_eff" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="prep_mc_eff" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_act_rec" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="act_rec" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_act_rec" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="act_rec" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_rec_sts" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="rec_sts" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_rec_sts" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="rec_sts" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_proc_no" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="proc_no" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_proc_no" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="proc_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_upd_date" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="upd_date" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_upd_date" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="upd_date" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_upd_time" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="upd_time" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_upd_time" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="upd_time" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_user_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="user_id" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_user_id" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="user_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_client_ip" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="client_ip" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_client_ip" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="client_ip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="prep_mc_no" DataSetColumn="prep_mc_no" />
+              <Mapping SourceColumn="prep_mc_type" DataSetColumn="prep_mc_type" />
+              <Mapping SourceColumn="prep_mc_capacity" DataSetColumn="prep_mc_capacity" />
+              <Mapping SourceColumn="prep_mc_eff" DataSetColumn="prep_mc_eff" />
+              <Mapping SourceColumn="act_rec" DataSetColumn="act_rec" />
+              <Mapping SourceColumn="rec_sts" DataSetColumn="rec_sts" />
+              <Mapping SourceColumn="proc_no" DataSetColumn="proc_no" />
+              <Mapping SourceColumn="upd_date" DataSetColumn="upd_date" />
+              <Mapping SourceColumn="upd_time" DataSetColumn="upd_time" />
+              <Mapping SourceColumn="user_id" DataSetColumn="user_id" />
+              <Mapping SourceColumn="client_ip" DataSetColumn="client_ip" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSSizer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSSizer" msprop:Generator_UserDSName="DSSizer">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTSizer" msprop:Generator_TableClassName="DTSizerDataTable" msprop:Generator_TableVarName="tableDTSizer" msprop:Generator_RowChangedName="DTSizerRowChanged" msprop:Generator_TablePropName="DTSizer" msprop:Generator_RowDeletingName="DTSizerRowDeleting" msprop:Generator_RowChangingName="DTSizerRowChanging" msprop:Generator_RowEvHandlerName="DTSizerRowChangeEventHandler" msprop:Generator_RowDeletedName="DTSizerRowDeleted" msprop:Generator_RowClassName="DTSizerRow" msprop:Generator_UserTableName="DTSizer" msprop:Generator_RowEvArgName="DTSizerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="loom_model" msprop:Generator_ColumnVarNameInTable="columnloom_model" msprop:Generator_ColumnPropNameInRow="loom_model" msprop:Generator_ColumnPropNameInTable="loom_modelColumn" msprop:Generator_UserColumnName="loom_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remain_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period1_pcs" msprop:Generator_ColumnPropNameInRow="remain_period1_pcs" msprop:Generator_ColumnPropNameInTable="remain_period1_pcsColumn" msprop:Generator_UserColumnName="remain_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period1_mtr" msprop:Generator_ColumnPropNameInRow="remain_period1_mtr" msprop:Generator_ColumnPropNameInTable="remain_period1_mtrColumn" msprop:Generator_UserColumnName="remain_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_pcs" msprop:Generator_ColumnPropNameInRow="month1_period1_pcs" msprop:Generator_ColumnPropNameInTable="month1_period1_pcsColumn" msprop:Generator_UserColumnName="month1_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_mtr" msprop:Generator_ColumnPropNameInRow="month1_period1_mtr" msprop:Generator_ColumnPropNameInTable="month1_period1_mtrColumn" msprop:Generator_UserColumnName="month1_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_pcs" msprop:Generator_ColumnPropNameInRow="month2_period1_pcs" msprop:Generator_ColumnPropNameInTable="month2_period1_pcsColumn" msprop:Generator_UserColumnName="month2_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_mtr" msprop:Generator_ColumnPropNameInRow="month2_period1_mtr" msprop:Generator_ColumnPropNameInTable="month2_period1_mtrColumn" msprop:Generator_UserColumnName="month2_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_pcs" msprop:Generator_ColumnPropNameInRow="month3_period1_pcs" msprop:Generator_ColumnPropNameInTable="month3_period1_pcsColumn" msprop:Generator_UserColumnName="month3_period1_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="month1_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth1_work_day" msprop:Generator_ColumnPropNameInRow="month1_work_day" msprop:Generator_ColumnPropNameInTable="month1_work_dayColumn" msprop:Generator_UserColumnName="month1_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth2_work_day" msprop:Generator_ColumnPropNameInRow="month2_work_day" msprop:Generator_ColumnPropNameInTable="month2_work_dayColumn" msprop:Generator_UserColumnName="month2_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_work_day" msprop:Generator_ColumnVarNameInTable="columnmonth3_work_day" msprop:Generator_ColumnPropNameInRow="month3_work_day" msprop:Generator_ColumnPropNameInTable="month3_work_dayColumn" msprop:Generator_UserColumnName="month3_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period1_from" msprop:Generator_ColumnVarNameInTable="columnremain_period1_from" msprop:Generator_ColumnPropNameInRow="remain_period1_from" msprop:Generator_ColumnPropNameInTable="remain_period1_fromColumn" msprop:Generator_UserColumnName="remain_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period1_to" msprop:Generator_ColumnVarNameInTable="columnremain_period1_to" msprop:Generator_ColumnPropNameInRow="remain_period1_to" msprop:Generator_ColumnPropNameInTable="remain_period1_toColumn" msprop:Generator_UserColumnName="remain_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_from" msprop:Generator_ColumnVarNameInTable="columnremain_period2_from" msprop:Generator_ColumnPropNameInRow="remain_period2_from" msprop:Generator_ColumnPropNameInTable="remain_period2_fromColumn" msprop:Generator_UserColumnName="remain_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_period2_to" msprop:Generator_ColumnVarNameInTable="columnremain_period2_to" msprop:Generator_ColumnPropNameInRow="remain_period2_to" msprop:Generator_ColumnPropNameInTable="remain_period2_toColumn" msprop:Generator_UserColumnName="remain_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_from" msprop:Generator_ColumnPropNameInRow="month1_period1_from" msprop:Generator_ColumnPropNameInTable="month1_period1_fromColumn" msprop:Generator_UserColumnName="month1_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period1_to" msprop:Generator_ColumnPropNameInRow="month1_period1_to" msprop:Generator_ColumnPropNameInTable="month1_period1_toColumn" msprop:Generator_UserColumnName="month1_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_from" msprop:Generator_ColumnPropNameInRow="month1_period2_from" msprop:Generator_ColumnPropNameInTable="month1_period2_fromColumn" msprop:Generator_UserColumnName="month1_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_to" msprop:Generator_ColumnPropNameInRow="month1_period2_to" msprop:Generator_ColumnPropNameInTable="month1_period2_toColumn" msprop:Generator_UserColumnName="month1_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_from" msprop:Generator_ColumnPropNameInRow="month2_period1_from" msprop:Generator_ColumnPropNameInTable="month2_period1_fromColumn" msprop:Generator_UserColumnName="month2_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period1_to" msprop:Generator_ColumnPropNameInRow="month2_period1_to" msprop:Generator_ColumnPropNameInTable="month2_period1_toColumn" msprop:Generator_UserColumnName="month2_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_from" msprop:Generator_ColumnPropNameInRow="month2_period2_from" msprop:Generator_ColumnPropNameInTable="month2_period2_fromColumn" msprop:Generator_UserColumnName="month2_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_to" msprop:Generator_ColumnPropNameInRow="month2_period2_to" msprop:Generator_ColumnPropNameInTable="month2_period2_toColumn" msprop:Generator_UserColumnName="month2_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_from" msprop:Generator_ColumnPropNameInRow="month3_period1_from" msprop:Generator_ColumnPropNameInTable="month3_period1_fromColumn" msprop:Generator_UserColumnName="month3_period1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period1_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_to" msprop:Generator_ColumnPropNameInRow="month3_period1_to" msprop:Generator_ColumnPropNameInTable="month3_period1_toColumn" msprop:Generator_UserColumnName="month3_period1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_from" msprop:Generator_ColumnPropNameInRow="month3_period2_from" msprop:Generator_ColumnPropNameInTable="month3_period2_fromColumn" msprop:Generator_UserColumnName="month3_period2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_period2_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_to" msprop:Generator_ColumnPropNameInRow="month3_period2_to" msprop:Generator_ColumnPropNameInTable="month3_period2_toColumn" msprop:Generator_UserColumnName="month3_period2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_work_day" msprop:Generator_ColumnVarNameInTable="columnremain_work_day" msprop:Generator_ColumnPropNameInRow="remain_work_day" msprop:Generator_ColumnPropNameInTable="remain_work_dayColumn" msprop:Generator_UserColumnName="remain_work_day" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_pcs" msprop:Generator_ColumnPropNameInRow="month3_period2_pcs" msprop:Generator_ColumnPropNameInTable="month3_period2_pcsColumn" msprop:Generator_UserColumnName="month3_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_pcs" msprop:Generator_ColumnPropNameInRow="month2_period2_pcs" msprop:Generator_ColumnPropNameInTable="month2_period2_pcsColumn" msprop:Generator_UserColumnName="month2_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth2_period2_mtr" msprop:Generator_ColumnPropNameInRow="month2_period2_mtr" msprop:Generator_ColumnPropNameInTable="month2_period2_mtrColumn" msprop:Generator_UserColumnName="month2_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_pcs" msprop:Generator_ColumnPropNameInRow="month1_period2_pcs" msprop:Generator_ColumnPropNameInTable="month1_period2_pcsColumn" msprop:Generator_UserColumnName="month1_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth1_period2_mtr" msprop:Generator_ColumnPropNameInRow="month1_period2_mtr" msprop:Generator_ColumnPropNameInTable="month1_period2_mtrColumn" msprop:Generator_UserColumnName="month1_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_pcs" msprop:Generator_ColumnVarNameInTable="columnremain_period2_pcs" msprop:Generator_ColumnPropNameInRow="remain_period2_pcs" msprop:Generator_ColumnPropNameInTable="remain_period2_pcsColumn" msprop:Generator_UserColumnName="remain_period2_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="remain_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnremain_period2_mtr" msprop:Generator_ColumnPropNameInRow="remain_period2_mtr" msprop:Generator_ColumnPropNameInTable="remain_period2_mtrColumn" msprop:Generator_UserColumnName="remain_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period2_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period2_mtr" msprop:Generator_ColumnPropNameInRow="month3_period2_mtr" msprop:Generator_ColumnPropNameInTable="month3_period2_mtrColumn" msprop:Generator_UserColumnName="month3_period2_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_period1_mtr" msprop:Generator_ColumnVarNameInTable="columnmonth3_period1_mtr" msprop:Generator_ColumnPropNameInRow="month3_period1_mtr" msprop:Generator_ColumnPropNameInTable="month3_period1_mtrColumn" msprop:Generator_UserColumnName="month3_period1_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="length_gr" msprop:Generator_ColumnVarNameInTable="columnlength_gr" msprop:Generator_ColumnPropNameInRow="length_gr" msprop:Generator_ColumnPropNameInTable="length_grColumn" msprop:Generator_UserColumnName="length_gr" type="xs:decimal" />
+              <xs:element name="FlagType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlagType" msprop:Generator_ColumnPropNameInRow="FlagType" msprop:Generator_ColumnPropNameInTable="FlagTypeColumn" msprop:Generator_UserColumnName="FlagType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="warp_ln" msprop:Generator_ColumnVarNameInTable="columnwarp_ln" msprop:Generator_ColumnPropNameInRow="warp_ln" msprop:Generator_ColumnPropNameInTable="warp_lnColumn" msprop:Generator_UserColumnName="warp_ln" type="xs:decimal" />
+              <xs:element name="sizer_F" msprop:Generator_ColumnVarNameInTable="columnsizer_F" msprop:Generator_ColumnPropNameInRow="sizer_F" msprop:Generator_ColumnPropNameInTable="sizer_FColumn" msprop:Generator_UserColumnName="sizer_F" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wv_prep_machine_master" msprop:Generator_TableClassName="wv_prep_machine_masterDataTable" msprop:Generator_TableVarName="tablewv_prep_machine_master" msprop:Generator_TablePropName="wv_prep_machine_master" msprop:Generator_RowDeletingName="wv_prep_machine_masterRowDeleting" msprop:Generator_RowChangingName="wv_prep_machine_masterRowChanging" msprop:Generator_RowEvHandlerName="wv_prep_machine_masterRowChangeEventHandler" msprop:Generator_RowDeletedName="wv_prep_machine_masterRowDeleted" msprop:Generator_UserTableName="wv_prep_machine_master" msprop:Generator_RowChangedName="wv_prep_machine_masterRowChanged" msprop:Generator_RowEvArgName="wv_prep_machine_masterRowChangeEvent" msprop:Generator_RowClassName="wv_prep_machine_masterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prep_mc_no" msprop:Generator_ColumnVarNameInTable="columnprep_mc_no" msprop:Generator_ColumnPropNameInRow="prep_mc_no" msprop:Generator_ColumnPropNameInTable="prep_mc_noColumn" msprop:Generator_UserColumnName="prep_mc_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prep_mc_type" msprop:Generator_ColumnVarNameInTable="columnprep_mc_type" msprop:Generator_ColumnPropNameInRow="prep_mc_type" msprop:Generator_ColumnPropNameInTable="prep_mc_typeColumn" msprop:Generator_UserColumnName="prep_mc_type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prep_mc_capacity" msprop:Generator_ColumnVarNameInTable="columnprep_mc_capacity" msprop:Generator_ColumnPropNameInRow="prep_mc_capacity" msprop:Generator_ColumnPropNameInTable="prep_mc_capacityColumn" msprop:Generator_UserColumnName="prep_mc_capacity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="prep_mc_eff" msprop:Generator_ColumnVarNameInTable="columnprep_mc_eff" msprop:Generator_ColumnPropNameInRow="prep_mc_eff" msprop:Generator_ColumnPropNameInTable="prep_mc_effColumn" msprop:Generator_UserColumnName="prep_mc_eff" type="xs:decimal" minOccurs="0" />
+              <xs:element name="act_rec" msprop:Generator_ColumnVarNameInTable="columnact_rec" msprop:Generator_ColumnPropNameInRow="act_rec" msprop:Generator_ColumnPropNameInTable="act_recColumn" msprop:Generator_UserColumnName="act_rec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rec_sts" msprop:Generator_ColumnVarNameInTable="columnrec_sts" msprop:Generator_ColumnPropNameInRow="rec_sts" msprop:Generator_ColumnPropNameInTable="rec_stsColumn" msprop:Generator_UserColumnName="rec_sts" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="proc_no" msprop:Generator_ColumnVarNameInTable="columnproc_no" msprop:Generator_ColumnPropNameInRow="proc_no" msprop:Generator_ColumnPropNameInTable="proc_noColumn" msprop:Generator_UserColumnName="proc_no" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="upd_date" msprop:Generator_ColumnVarNameInTable="columnupd_date" msprop:Generator_ColumnPropNameInRow="upd_date" msprop:Generator_ColumnPropNameInTable="upd_dateColumn" msprop:Generator_UserColumnName="upd_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="upd_time" msprop:Generator_ColumnVarNameInTable="columnupd_time" msprop:Generator_ColumnPropNameInRow="upd_time" msprop:Generator_ColumnPropNameInTable="upd_timeColumn" msprop:Generator_UserColumnName="upd_time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="user_id" msprop:Generator_ColumnVarNameInTable="columnuser_id" msprop:Generator_ColumnPropNameInRow="user_id" msprop:Generator_ColumnPropNameInTable="user_idColumn" msprop:Generator_UserColumnName="user_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="client_ip" msprop:Generator_ColumnVarNameInTable="columnclient_ip" msprop:Generator_ColumnPropNameInRow="client_ip" msprop:Generator_ColumnPropNameInTable="client_ipColumn" msprop:Generator_UserColumnName="client_ip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DTSizer" />
+      <xs:field xpath="mstns:Expr2" />
+    </xs:unique>
+    <xs:unique name="wv_prep_machine_master_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:wv_prep_machine_master" />
+      <xs:field xpath="mstns:prep_mc_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSYarnGrey" targetNamespace="http://tempuri.org/DSYarnGrey.xsd" xmlns:mstns="http://tempuri.org/DSYarnGrey.xsd" xmlns="http://tempuri.org/DSYarnGrey.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="istem_smsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="istem_smsConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.istem_smsConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SBO_ISM_LIVEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SBO_ISM_LIVEConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.SBO_ISM_LIVEConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSYarnGrey" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSYarnGrey" msprop:Generator_UserDSName="DSYarnGrey">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_DELIV_HEADER" msprop:Generator_TableClassName="DT_DELIV_HEADERDataTable" msprop:Generator_TableVarName="tableDT_DELIV_HEADER" msprop:Generator_RowChangedName="DT_DELIV_HEADERRowChanged" msprop:Generator_TablePropName="DT_DELIV_HEADER" msprop:Generator_RowDeletingName="DT_DELIV_HEADERRowDeleting" msprop:Generator_RowChangingName="DT_DELIV_HEADERRowChanging" msprop:Generator_RowEvHandlerName="DT_DELIV_HEADERRowChangeEventHandler" msprop:Generator_RowDeletedName="DT_DELIV_HEADERRowDeleted" msprop:Generator_RowClassName="DT_DELIV_HEADERRow" msprop:Generator_UserTableName="DT_DELIV_HEADER" msprop:Generator_RowEvArgName="DT_DELIV_HEADERRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vendor_code" msprop:Generator_ColumnVarNameInTable="columnvendor_code" msprop:Generator_ColumnPropNameInRow="vendor_code" msprop:Generator_ColumnPropNameInTable="vendor_codeColumn" msprop:Generator_UserColumnName="vendor_code" type="xs:string" minOccurs="0" />
+              <xs:element name="vendor_name" msprop:Generator_ColumnVarNameInTable="columnvendor_name" msprop:Generator_ColumnPropNameInRow="vendor_name" msprop:Generator_ColumnPropNameInTable="vendor_nameColumn" msprop:Generator_UserColumnName="vendor_name" type="xs:string" minOccurs="0" />
+              <xs:element name="yarn_grey_flag" msprop:Generator_ColumnVarNameInTable="columnyarn_grey_flag" msprop:Generator_ColumnPropNameInRow="yarn_grey_flag" msprop:Generator_ColumnPropNameInTable="yarn_grey_flagColumn" msprop:Generator_UserColumnName="yarn_grey_flag" type="xs:string" minOccurs="0" />
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_DELIV_DETAIL" msprop:Generator_TableClassName="DT_DELIV_DETAILDataTable" msprop:Generator_TableVarName="tableDT_DELIV_DETAIL" msprop:Generator_RowChangedName="DT_DELIV_DETAILRowChanged" msprop:Generator_TablePropName="DT_DELIV_DETAIL" msprop:Generator_RowDeletingName="DT_DELIV_DETAILRowDeleting" msprop:Generator_RowChangingName="DT_DELIV_DETAILRowChanging" msprop:Generator_RowEvHandlerName="DT_DELIV_DETAILRowChangeEventHandler" msprop:Generator_RowDeletedName="DT_DELIV_DETAILRowDeleted" msprop:Generator_RowClassName="DT_DELIV_DETAILRow" msprop:Generator_UserTableName="DT_DELIV_DETAIL" msprop:Generator_RowEvArgName="DT_DELIV_DETAILRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="yarn_grey_code" msprop:Generator_ColumnVarNameInTable="columnyarn_grey_code" msprop:Generator_ColumnPropNameInRow="yarn_grey_code" msprop:Generator_ColumnPropNameInTable="yarn_grey_codeColumn" msprop:Generator_UserColumnName="yarn_grey_code" type="xs:string" minOccurs="0" />
+              <xs:element name="yarn_grey_name" msprop:Generator_ColumnVarNameInTable="columnyarn_grey_name" msprop:Generator_ColumnPropNameInRow="yarn_grey_name" msprop:Generator_ColumnPropNameInTable="yarn_grey_nameColumn" msprop:Generator_UserColumnName="yarn_grey_name" type="xs:string" minOccurs="0" />
+              <xs:element name="plan_deliv_date" msprop:Generator_ColumnVarNameInTable="columnplan_deliv_date" msprop:Generator_ColumnPropNameInRow="plan_deliv_date" msprop:Generator_ColumnPropNameInTable="plan_deliv_dateColumn" msprop:Generator_UserColumnName="plan_deliv_date" type="xs:string" minOccurs="0" />
+              <xs:element name="plan_deliv_qty" msprop:Generator_ColumnVarNameInTable="columnplan_deliv_qty" msprop:Generator_ColumnPropNameInRow="plan_deliv_qty" msprop:Generator_ColumnPropNameInTable="plan_deliv_qtyColumn" msprop:Generator_UserColumnName="plan_deliv_qty" type="xs:double" minOccurs="0" />
+              <xs:element name="plan_deliv_qty_unit" msprop:Generator_ColumnVarNameInTable="columnplan_deliv_qty_unit" msprop:Generator_ColumnPropNameInRow="plan_deliv_qty_unit" msprop:Generator_ColumnPropNameInTable="plan_deliv_qty_unitColumn" msprop:Generator_UserColumnName="plan_deliv_qty_unit" type="xs:string" minOccurs="0" />
+              <xs:element name="plan_deliv" msprop:Generator_ColumnVarNameInTable="columnplan_deliv" msprop:Generator_ColumnPropNameInRow="plan_deliv" msprop:Generator_ColumnPropNameInTable="plan_delivColumn" msprop:Generator_UserColumnName="plan_deliv" type="xs:string" minOccurs="0" />
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month" type="xs:string" minOccurs="0" />
+              <xs:element name="vendor_code" msprop:Generator_ColumnVarNameInTable="columnvendor_code" msprop:Generator_ColumnPropNameInRow="vendor_code" msprop:Generator_ColumnPropNameInTable="vendor_codeColumn" msprop:Generator_UserColumnName="vendor_code" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B507A17-B6C3-475B-BBF6-01A850989956}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>SALESREQ</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SALESREQ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SALESREQ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\ClassHistory.vb" />
+    <Compile Include="Class\ClassUserakses.vb" />
+    <Compile Include="Class\Mod_Koneksi.vb" />
+    <Compile Include="Class\Mod_Sl_Request.vb" />
+    <Compile Include="Class\Mod_Yarn_delivery_Entry.vb" />
+    <Compile Include="DataSet\DSLoomEff.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSLoomEff.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSLoomEff1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSLoomEff1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSLoomEff1.vb">
+      <DependentUpon>DSLoomEff1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSReqSalesEntry.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReqSalesEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSReqSalesEntry.vb">
+      <DependentUpon>DSReqSalesEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSSizer.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSizer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSSizerbeamer.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSizerbeamer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSSizerbeamer.vb">
+      <DependentUpon>DSSizerbeamer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSYarnGrey.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSYarnGrey.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSYarnGrey.vb">
+      <DependentUpon>DSYarnGrey.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSYarnGry.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSYarnGry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSYarnGry.vb">
+      <DependentUpon>DSYarnGry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\RPT_Daily_loom_setting.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Daily_loom_setting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\RPT_Prod_Balance.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT_Prod_Balance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmDailyLoomSet.designer.vb">
+      <DependentUpon>frmDailyLoomSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmDailyLoomSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmEntryReqYarn.Designer.vb">
+      <DependentUpon>frmEntryReqYarn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmEntryReqYarn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmGenerate_Plan.Designer.vb">
+      <DependentUpon>frmGenerate_Plan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmGenerate_Plan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLayoutMachineMaster.designer.vb">
+      <DependentUpon>frmLayoutMachineMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLayoutMachineMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLayoutMachineMasterInfo.designer.vb">
+      <DependentUpon>frmLayoutMachineMasterInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLayoutMachineMasterInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLoomEff.Designer.vb">
+      <DependentUpon>frmLoomEff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmLoomEff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmPlanVsActual.designer.vb">
+      <DependentUpon>frmPlanVsActual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmPlanVsActual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmProductionBalance.designer.vb">
+      <DependentUpon>frmProductionBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmProductionBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmSales_Entry_Req.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmSales_Entry_Req.Designer.vb">
+      <DependentUpon>frmSales_Entry_Req.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmSales_Delivery_Entry.Designer.vb">
+      <DependentUpon>frmSales_Delivery_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmSales_Delivery_Entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmSizeBeamer.Designer.vb">
+      <DependentUpon>frmSizeBeamer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmSizeBeamer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUpdateLoomSetting.designer.vb">
+      <DependentUpon>frmUpdateLoomSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUpdateLoomSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUpdateLoomSettingCariData.designer.vb">
+      <DependentUpon>frmUpdateLoomSettingCariData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUpdateLoomSettingCariData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUpdGrySett.Designer.vb">
+      <DependentUpon>frmUpdGrySett.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUpdGrySett.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUploadWIP3.Designer.vb">
+      <DependentUpon>frmUploadWIP3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\frmUploadWIP3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\MenuReport.Designer.vb">
+      <DependentUpon>MenuReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\MenuReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\Menusales.Designer.vb">
+      <DependentUpon>Menusales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\Menusales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM SALES REQ\Menuweaving.Designer.vb">
+      <DependentUpon>Menuweaving.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM SALES REQ\Menuweaving.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuUtama.Designer.vb">
+      <DependentUpon>frmMenuUtama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Utama.Designer.vb">
+      <DependentUpon>Menu_Utama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Utama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\CRBeamer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRBeamer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRMainSB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMainSB.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRMainSizeBeamer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMainSizeBeamer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRPrintLoomEff.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPrintLoomEff.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRPrintLoomEff1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPrintLoomEff1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRSalesReqEntry.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSalesReqEntry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRSizer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSizer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRSizer1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRSizer1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRYarnGrey.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRYarnGrey.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRYarnGrey1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRYarnGrey1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\frmBeamer.Designer.vb">
+      <DependentUpon>frmBeamer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmBeamer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmMainSB.Designer.vb">
+      <DependentUpon>FrmMainSB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmMainSB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintDlvYarn.Designer.vb">
+      <DependentUpon>frmPrintDlvYarn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintDlvYarn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintLoomEff.Designer.vb">
+      <DependentUpon>frmPrintLoomEff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintLoomEff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintSalesReq.Designer.vb">
+      <DependentUpon>frmPrintSalesReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintSalesReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintSizeBeamer.Designer.vb">
+      <DependentUpon>frmPrintSizeBeamer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintSizeBeamer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmPrintSizer.Designer.vb">
+      <DependentUpon>frmPrintSizer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmPrintSizer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReportView.designer.vb">
+      <DependentUpon>frmReportView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReportView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptPrint.Designer.vb">
+      <DependentUpon>frmRptPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmRptPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmSizerBeameredit.Designer.vb">
+      <DependentUpon>frmSizerBeameredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmSizerBeameredit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\WPPC-ReportLoomSetting.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WPPC-ReportLoomSetting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\WPPC_ReportProdBalance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WPPC_ReportProdBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FORM SALES REQ\frmDailyLoomSet.resx">
+      <DependentUpon>frmDailyLoomSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmEntryReqYarn.resx">
+      <DependentUpon>frmEntryReqYarn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmGenerate_Plan.resx">
+      <DependentUpon>frmGenerate_Plan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmLayoutMachineMaster.resx">
+      <DependentUpon>frmLayoutMachineMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmLayoutMachineMasterInfo.resx">
+      <DependentUpon>frmLayoutMachineMasterInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmLoomEff.resx">
+      <DependentUpon>frmLoomEff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmPlanVsActual.resx">
+      <DependentUpon>frmPlanVsActual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmProductionBalance.resx">
+      <DependentUpon>frmProductionBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmSales_Entry_Req.resx">
+      <DependentUpon>frmSales_Entry_Req.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmSales_Delivery_Entry.resx">
+      <DependentUpon>frmSales_Delivery_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmSizeBeamer.resx">
+      <DependentUpon>frmSizeBeamer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmUpdateLoomSetting.resx">
+      <DependentUpon>frmUpdateLoomSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmUpdateLoomSettingCariData.resx">
+      <DependentUpon>frmUpdateLoomSettingCariData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmUpdGrySett.resx">
+      <DependentUpon>frmUpdGrySett.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\frmUploadWIP3.resx">
+      <DependentUpon>frmUploadWIP3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\MenuReport.resx">
+      <DependentUpon>MenuReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\Menusales.resx">
+      <DependentUpon>Menusales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM SALES REQ\Menuweaving.resx">
+      <DependentUpon>Menuweaving.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuUtama.resx">
+      <DependentUpon>frmMenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Utama.resx">
+      <DependentUpon>Menu_Utama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRBeamer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRBeamer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRMainSB.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRMainSB.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRMainSizeBeamer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRMainSizeBeamer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRPrintLoomEff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPrintLoomEff.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRPrintLoomEff1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPrintLoomEff1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRSalesReqEntry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRSalesReqEntry.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRSizer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRSizer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRSizer1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRSizer1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRYarnGrey.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRYarnGrey.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRYarnGrey1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRYarnGrey1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmBeamer.resx">
+      <DependentUpon>frmBeamer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmMainSB.resx">
+      <DependentUpon>FrmMainSB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPrintDlvYarn.resx">
+      <DependentUpon>frmPrintDlvYarn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPrintLoomEff.resx">
+      <DependentUpon>frmPrintLoomEff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPrintSalesReq.resx">
+      <DependentUpon>frmPrintSalesReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPrintSizeBeamer.resx">
+      <DependentUpon>frmPrintSizeBeamer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmPrintSizer.resx">
+      <DependentUpon>frmPrintSizer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmReportView.resx">
+      <DependentUpon>frmReportView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptPrint.resx">
+      <DependentUpon>frmRptPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmSizerBeameredit.resx">
+      <DependentUpon>frmSizerBeameredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WPPC-ReportLoomSetting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WPPC-ReportLoomSetting.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\WPPC_ReportProdBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WPPC_ReportProdBalance.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\DSLoomEff.xsc">
+      <DependentUpon>DSLoomEff.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSLoomEff.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSLoomEff.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSLoomEff.xss">
+      <DependentUpon>DSLoomEff.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSLoomEff1.xsc">
+      <DependentUpon>DSLoomEff1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSLoomEff1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSLoomEff1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSLoomEff1.xss">
+      <DependentUpon>DSLoomEff1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSReqSalesEntry.xsc">
+      <DependentUpon>DSReqSalesEntry.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSReqSalesEntry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReqSalesEntry.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSReqSalesEntry.xss">
+      <DependentUpon>DSReqSalesEntry.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSSizer.xsc">
+      <DependentUpon>DSSizer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSSizer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSizer.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSSizer.xss">
+      <DependentUpon>DSSizer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSSizerbeamer.xsc">
+      <DependentUpon>DSSizerbeamer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSSizerbeamer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSizerbeamer.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSSizerbeamer.xss">
+      <DependentUpon>DSSizerbeamer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSYarnGrey.xsc">
+      <DependentUpon>DSYarnGrey.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSYarnGrey.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSYarnGrey.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSYarnGrey.xss">
+      <DependentUpon>DSYarnGrey.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSYarnGry.xsc">
+      <DependentUpon>DSYarnGry.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSYarnGry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSYarnGry.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSYarnGry.xss">
+      <DependentUpon>DSYarnGry.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RPT_Daily_loom_setting.xsc">
+      <DependentUpon>RPT_Daily_loom_setting.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RPT_Daily_loom_setting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RPT_Daily_loom_setting.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\RPT_Daily_loom_setting.xss">
+      <DependentUpon>RPT_Daily_loom_setting.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RPT_Prod_Balance.xsc">
+      <DependentUpon>RPT_Prod_Balance.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\RPT_Prod_Balance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RPT_Prod_Balance.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\RPT_Prod_Balance.xss">
+      <DependentUpon>RPT_Prod_Balance.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="IMG\Image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Black1%28edit-1%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Black2%28edit-1%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Blue1%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Blue2%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Brown1%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Brown2%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Green1%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Green2%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Purple1%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Purple2%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Red1%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Red2%28edit%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Black1_edit_1_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Black2_edit_1_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Green1%28edit-1%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\Green2%28edit-1%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

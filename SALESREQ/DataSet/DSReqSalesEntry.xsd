@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSReqSalesEntry" targetNamespace="http://tempuri.org/DSReqSalesEntry.xsd" xmlns:mstns="http://tempuri.org/DSReqSalesEntry.xsd" xmlns="http://tempuri.org/DSReqSalesEntry.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="istem_smsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="istem_smsConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.istem_smsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSReqSalesEntry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSReqSalesEntry" msprop:Generator_UserDSName="DSReqSalesEntry">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sl_grey_request" msprop:Generator_TableClassName="sl_grey_requestDataTable" msprop:Generator_TableVarName="tablesl_grey_request" msprop:Generator_RowChangedName="sl_grey_requestRowChanged" msprop:Generator_TablePropName="sl_grey_request" msprop:Generator_RowDeletingName="sl_grey_requestRowDeleting" msprop:Generator_RowChangingName="sl_grey_requestRowChanging" msprop:Generator_RowEvHandlerName="sl_grey_requestRowChangeEventHandler" msprop:Generator_RowDeletedName="sl_grey_requestRowDeleted" msprop:Generator_RowClassName="sl_grey_requestRow" msprop:Generator_UserTableName="sl_grey_request" msprop:Generator_RowEvArgName="sl_grey_requestRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="plan_rev_no" msprop:Generator_ColumnVarNameInTable="columnplan_rev_no" msprop:Generator_ColumnPropNameInRow="plan_rev_no" msprop:Generator_ColumnPropNameInTable="plan_rev_noColumn" msprop:Generator_UserColumnName="plan_rev_no" type="xs:unsignedByte" />
+              <xs:element name="request_date" msprop:Generator_ColumnVarNameInTable="columnrequest_date" msprop:Generator_ColumnPropNameInRow="request_date" msprop:Generator_ColumnPropNameInTable="request_dateColumn" msprop:Generator_UserColumnName="request_date" type="xs:dateTime" />
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="item_category" msprop:Generator_ColumnVarNameInTable="columnitem_category" msprop:Generator_ColumnPropNameInRow="item_category" msprop:Generator_ColumnPropNameInTable="item_categoryColumn" msprop:Generator_UserColumnName="item_category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="plan_rev_date" msprop:Generator_ColumnVarNameInTable="columnplan_rev_date" msprop:Generator_ColumnPropNameInRow="plan_rev_date" msprop:Generator_ColumnPropNameInTable="plan_rev_dateColumn" msprop:Generator_UserColumnName="plan_rev_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="send_date" msprop:Generator_ColumnVarNameInTable="columnsend_date" msprop:Generator_ColumnPropNameInRow="send_date" msprop:Generator_ColumnPropNameInTable="send_dateColumn" msprop:Generator_UserColumnName="send_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="garment_flag" msprop:Generator_ColumnVarNameInTable="columngarment_flag" msprop:Generator_ColumnPropNameInRow="garment_flag" msprop:Generator_ColumnPropNameInTable="garment_flagColumn" msprop:Generator_UserColumnName="garment_flag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remain_date_from" msprop:Generator_ColumnVarNameInTable="columnremain_date_from" msprop:Generator_ColumnPropNameInRow="remain_date_from" msprop:Generator_ColumnPropNameInTable="remain_date_fromColumn" msprop:Generator_UserColumnName="remain_date_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_date_to" msprop:Generator_ColumnVarNameInTable="columnremain_date_to" msprop:Generator_ColumnPropNameInRow="remain_date_to" msprop:Generator_ColumnPropNameInTable="remain_date_toColumn" msprop:Generator_UserColumnName="remain_date_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remain_input_qty" msprop:Generator_ColumnVarNameInTable="columnremain_input_qty" msprop:Generator_ColumnPropNameInRow="remain_input_qty" msprop:Generator_ColumnPropNameInTable="remain_input_qtyColumn" msprop:Generator_UserColumnName="remain_input_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_from" msprop:Generator_ColumnVarNameInTable="columnmonth1_from" msprop:Generator_ColumnPropNameInRow="month1_from" msprop:Generator_ColumnPropNameInTable="month1_fromColumn" msprop:Generator_UserColumnName="month1_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_to" msprop:Generator_ColumnVarNameInTable="columnmonth1_to" msprop:Generator_ColumnPropNameInRow="month1_to" msprop:Generator_ColumnPropNameInTable="month1_toColumn" msprop:Generator_UserColumnName="month1_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month1_deliv_qty" msprop:Generator_ColumnVarNameInTable="columnmonth1_deliv_qty" msprop:Generator_ColumnPropNameInRow="month1_deliv_qty" msprop:Generator_ColumnPropNameInTable="month1_deliv_qtyColumn" msprop:Generator_UserColumnName="month1_deliv_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month1_input_qty" msprop:Generator_ColumnVarNameInTable="columnmonth1_input_qty" msprop:Generator_ColumnPropNameInRow="month1_input_qty" msprop:Generator_ColumnPropNameInTable="month1_input_qtyColumn" msprop:Generator_UserColumnName="month1_input_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_from" msprop:Generator_ColumnVarNameInTable="columnmonth2_from" msprop:Generator_ColumnPropNameInRow="month2_from" msprop:Generator_ColumnPropNameInTable="month2_fromColumn" msprop:Generator_UserColumnName="month2_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_to" msprop:Generator_ColumnVarNameInTable="columnmonth2_to" msprop:Generator_ColumnPropNameInRow="month2_to" msprop:Generator_ColumnPropNameInTable="month2_toColumn" msprop:Generator_UserColumnName="month2_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month2_deliv_qty" msprop:Generator_ColumnVarNameInTable="columnmonth2_deliv_qty" msprop:Generator_ColumnPropNameInRow="month2_deliv_qty" msprop:Generator_ColumnPropNameInTable="month2_deliv_qtyColumn" msprop:Generator_UserColumnName="month2_deliv_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month2_input_qty" msprop:Generator_ColumnVarNameInTable="columnmonth2_input_qty" msprop:Generator_ColumnPropNameInRow="month2_input_qty" msprop:Generator_ColumnPropNameInTable="month2_input_qtyColumn" msprop:Generator_UserColumnName="month2_input_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_from" msprop:Generator_ColumnVarNameInTable="columnmonth3_from" msprop:Generator_ColumnPropNameInRow="month3_from" msprop:Generator_ColumnPropNameInTable="month3_fromColumn" msprop:Generator_UserColumnName="month3_from" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_to" msprop:Generator_ColumnVarNameInTable="columnmonth3_to" msprop:Generator_ColumnPropNameInRow="month3_to" msprop:Generator_ColumnPropNameInTable="month3_toColumn" msprop:Generator_UserColumnName="month3_to" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="month3_deliv_qty" msprop:Generator_ColumnVarNameInTable="columnmonth3_deliv_qty" msprop:Generator_ColumnPropNameInRow="month3_deliv_qty" msprop:Generator_ColumnPropNameInTable="month3_deliv_qtyColumn" msprop:Generator_UserColumnName="month3_deliv_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month3_input_qty" msprop:Generator_ColumnVarNameInTable="columnmonth3_input_qty" msprop:Generator_ColumnPropNameInRow="month3_input_qty" msprop:Generator_ColumnPropNameInTable="month3_input_qtyColumn" msprop:Generator_UserColumnName="month3_input_qty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="rec_sts" msprop:Generator_ColumnVarNameInTable="columnrec_sts" msprop:Generator_ColumnPropNameInRow="rec_sts" msprop:Generator_ColumnPropNameInTable="rec_stsColumn" msprop:Generator_UserColumnName="rec_sts" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="proc_no" msprop:Generator_ColumnVarNameInTable="columnproc_no" msprop:Generator_ColumnPropNameInRow="proc_no" msprop:Generator_ColumnPropNameInTable="proc_noColumn" msprop:Generator_UserColumnName="proc_no" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="upd_date" msprop:Generator_ColumnVarNameInTable="columnupd_date" msprop:Generator_ColumnPropNameInRow="upd_date" msprop:Generator_ColumnPropNameInTable="upd_dateColumn" msprop:Generator_UserColumnName="upd_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="upd_time" msprop:Generator_ColumnVarNameInTable="columnupd_time" msprop:Generator_ColumnPropNameInRow="upd_time" msprop:Generator_ColumnPropNameInTable="upd_timeColumn" msprop:Generator_UserColumnName="upd_time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="user_id" msprop:Generator_ColumnVarNameInTable="columnuser_id" msprop:Generator_ColumnPropNameInRow="user_id" msprop:Generator_ColumnPropNameInTable="user_idColumn" msprop:Generator_UserColumnName="user_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="client_ip" msprop:Generator_ColumnVarNameInTable="columnclient_ip" msprop:Generator_ColumnPropNameInRow="client_ip" msprop:Generator_ColumnPropNameInTable="client_ipColumn" msprop:Generator_UserColumnName="client_ip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DTSales" msprop:Generator_TableClassName="DTSalesDataTable" msprop:Generator_TableVarName="tableDTSales" msprop:Generator_TablePropName="DTSales" msprop:Generator_RowDeletingName="DTSalesRowDeleting" msprop:Generator_RowChangingName="DTSalesRowChanging" msprop:Generator_RowEvHandlerName="DTSalesRowChangeEventHandler" msprop:Generator_RowDeletedName="DTSalesRowDeleted" msprop:Generator_UserTableName="DTSales" msprop:Generator_RowChangedName="DTSalesRowChanged" msprop:Generator_RowEvArgName="DTSalesRowChangeEvent" msprop:Generator_RowClassName="DTSalesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month" type="xs:string" minOccurs="0" />
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no" type="xs:string" minOccurs="0" />
+              <xs:element name="item_category" msprop:Generator_ColumnVarNameInTable="columnitem_category" msprop:Generator_ColumnPropNameInRow="item_category" msprop:Generator_ColumnPropNameInTable="item_categoryColumn" msprop:Generator_UserColumnName="item_category" type="xs:string" minOccurs="0" />
+              <xs:element name="month1_deliv" msprop:Generator_ColumnVarNameInTable="columnmonth1_deliv" msprop:Generator_ColumnPropNameInRow="month1_deliv" msprop:Generator_ColumnPropNameInTable="month1_delivColumn" msprop:Generator_UserColumnName="month1_deliv" type="xs:string" minOccurs="0" />
+              <xs:element name="month1_input" msprop:Generator_ColumnVarNameInTable="columnmonth1_input" msprop:Generator_ColumnPropNameInRow="month1_input" msprop:Generator_ColumnPropNameInTable="month1_inputColumn" msprop:Generator_UserColumnName="month1_input" type="xs:string" minOccurs="0" />
+              <xs:element name="month2_deliv" msprop:Generator_ColumnVarNameInTable="columnmonth2_deliv" msprop:Generator_ColumnPropNameInRow="month2_deliv" msprop:Generator_ColumnPropNameInTable="month2_delivColumn" msprop:Generator_UserColumnName="month2_deliv" type="xs:string" minOccurs="0" />
+              <xs:element name="month2_input" msprop:Generator_ColumnVarNameInTable="columnmonth2_input" msprop:Generator_ColumnPropNameInRow="month2_input" msprop:Generator_ColumnPropNameInTable="month2_inputColumn" msprop:Generator_UserColumnName="month2_input" type="xs:string" minOccurs="0" />
+              <xs:element name="month3_deliv" msprop:Generator_ColumnVarNameInTable="columnmonth3_deliv" msprop:Generator_ColumnPropNameInRow="month3_deliv" msprop:Generator_ColumnPropNameInTable="month3_delivColumn" msprop:Generator_UserColumnName="month3_deliv" type="xs:string" minOccurs="0" />
+              <xs:element name="month3_input" msprop:Generator_ColumnVarNameInTable="columnmonth3_input" msprop:Generator_ColumnPropNameInRow="month3_input" msprop:Generator_ColumnPropNameInTable="month3_inputColumn" msprop:Generator_UserColumnName="month3_input" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sl_grey_request" />
+      <xs:field xpath="mstns:plan_month" />
+      <xs:field xpath="mstns:request_date" />
+      <xs:field xpath="mstns:grey_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

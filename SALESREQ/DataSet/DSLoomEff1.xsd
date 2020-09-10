@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSLoomEff1" targetNamespace="http://tempuri.org/DSLoomEff1.xsd" xmlns:mstns="http://tempuri.org/DSLoomEff1.xsd" xmlns="http://tempuri.org/DSLoomEff1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="istem_smsConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="istem_smsConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.istem_smsConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DTLoomEFFTableAdapter" GeneratorDataComponentClassName="DTLoomEFFTableAdapter" Name="DTLoomEFF" UserDataComponentName="DTLoomEFFTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="istem_smsConnectionString2 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        wv_loom_eff.plan_month, wv_loom_eff.grey_no, wv_fabric_analysis_master.length_gr, wv_loom_eff.loom_model, wv_loom_eff.rpm, wv_loom_eff.density, wv_loom_eff.eff, wv_loom_eff.prod_day_mtr, 
+                         wv_loom_eff.prod_day_pcs, wv_fabric_analysis_master.item_category
+FROM            wv_loom_eff INNER JOIN
+                         wv_fabric_analysis_master ON wv_loom_eff.grey_no = wv_fabric_analysis_master.grey_no</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="plan_month" DataSetColumn="plan_month" />
+              <Mapping SourceColumn="grey_no" DataSetColumn="grey_no" />
+              <Mapping SourceColumn="length_gr" DataSetColumn="length_gr" />
+              <Mapping SourceColumn="loom_model" DataSetColumn="loom_model" />
+              <Mapping SourceColumn="rpm" DataSetColumn="rpm" />
+              <Mapping SourceColumn="density" DataSetColumn="density" />
+              <Mapping SourceColumn="eff" DataSetColumn="eff" />
+              <Mapping SourceColumn="prod_day_mtr" DataSetColumn="prod_day_mtr" />
+              <Mapping SourceColumn="prod_day_pcs" DataSetColumn="prod_day_pcs" />
+              <Mapping SourceColumn="item_category" DataSetColumn="item_category" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSLoomEff1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSLoomEff1" msprop:Generator_UserDSName="DSLoomEff1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DTLoomEFF" msprop:Generator_TableClassName="DTLoomEFFDataTable" msprop:Generator_TableVarName="tableDTLoomEFF" msprop:Generator_TablePropName="DTLoomEFF" msprop:Generator_RowDeletingName="DTLoomEFFRowDeleting" msprop:Generator_RowChangingName="DTLoomEFFRowChanging" msprop:Generator_RowEvHandlerName="DTLoomEFFRowChangeEventHandler" msprop:Generator_RowDeletedName="DTLoomEFFRowDeleted" msprop:Generator_UserTableName="DTLoomEFF" msprop:Generator_RowChangedName="DTLoomEFFRowChanged" msprop:Generator_RowEvArgName="DTLoomEFFRowChangeEvent" msprop:Generator_RowClassName="DTLoomEFFRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="plan_month" msprop:Generator_ColumnVarNameInTable="columnplan_month" msprop:Generator_ColumnPropNameInRow="plan_month" msprop:Generator_ColumnPropNameInTable="plan_monthColumn" msprop:Generator_UserColumnName="plan_month">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="grey_no" msprop:Generator_ColumnVarNameInTable="columngrey_no" msprop:Generator_ColumnPropNameInRow="grey_no" msprop:Generator_ColumnPropNameInTable="grey_noColumn" msprop:Generator_UserColumnName="grey_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="length_gr" msprop:Generator_ColumnVarNameInTable="columnlength_gr" msprop:Generator_ColumnPropNameInRow="length_gr" msprop:Generator_ColumnPropNameInTable="length_grColumn" msprop:Generator_UserColumnName="length_gr" type="xs:decimal" />
+              <xs:element name="loom_model" msprop:Generator_ColumnVarNameInTable="columnloom_model" msprop:Generator_ColumnPropNameInRow="loom_model" msprop:Generator_ColumnPropNameInTable="loom_modelColumn" msprop:Generator_UserColumnName="loom_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rpm" msprop:Generator_ColumnVarNameInTable="columnrpm" msprop:Generator_ColumnPropNameInRow="rpm" msprop:Generator_ColumnPropNameInTable="rpmColumn" msprop:Generator_UserColumnName="rpm" type="xs:decimal" minOccurs="0" />
+              <xs:element name="density" msprop:Generator_ColumnVarNameInTable="columndensity" msprop:Generator_ColumnPropNameInRow="density" msprop:Generator_ColumnPropNameInTable="densityColumn" msprop:Generator_UserColumnName="density" type="xs:decimal" minOccurs="0" />
+              <xs:element name="eff" msprop:Generator_ColumnVarNameInTable="columneff" msprop:Generator_ColumnPropNameInRow="eff" msprop:Generator_ColumnPropNameInTable="effColumn" msprop:Generator_UserColumnName="eff" type="xs:decimal" minOccurs="0" />
+              <xs:element name="prod_day_mtr" msprop:Generator_ColumnVarNameInTable="columnprod_day_mtr" msprop:Generator_ColumnPropNameInRow="prod_day_mtr" msprop:Generator_ColumnPropNameInTable="prod_day_mtrColumn" msprop:Generator_UserColumnName="prod_day_mtr" type="xs:decimal" minOccurs="0" />
+              <xs:element name="prod_day_pcs" msprop:Generator_ColumnVarNameInTable="columnprod_day_pcs" msprop:Generator_ColumnPropNameInRow="prod_day_pcs" msprop:Generator_ColumnPropNameInTable="prod_day_pcsColumn" msprop:Generator_UserColumnName="prod_day_pcs" type="xs:decimal" minOccurs="0" />
+              <xs:element name="item_category" msprop:Generator_ColumnVarNameInTable="columnitem_category" msprop:Generator_ColumnPropNameInRow="item_category" msprop:Generator_ColumnPropNameInTable="item_categoryColumn" msprop:Generator_UserColumnName="item_category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DTLoomEFF" />
+      <xs:field xpath="mstns:plan_month" />
+      <xs:field xpath="mstns:grey_no" />
+      <xs:field xpath="mstns:loom_model" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
