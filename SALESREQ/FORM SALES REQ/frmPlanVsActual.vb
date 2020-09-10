@@ -76,7 +76,7 @@ Public Class frmPlanVsActual
             '---Column Name
             .Cells(5, 2).value = dt3.Rows(0).Item(0) & " - " & dt3.Rows(0).Item(1) & " " & dt3.Rows(0).Item(2)
             .Cells(5, 6).value = dt3.Rows(0).Item(3) & " - " & dt3.Rows(0).Item(4) & " " & dt3.Rows(0).Item(5)
-            .Cells(5, 10).value = dt3.Rows(0).Item(6) & " " & dt3.Rows(0).Item(2) & " - " & dt3.Rows(0).Item(4) & " " & dt3.Rows(0).Item(5)
+            .Cells(5, 10).value = dt3.Rows(0).Item(6) & " " & dt3.Rows(0).Item(2) & " - " & dt3.Rows(0).Item(7) & " " & dt3.Rows(0).Item(5)
 
             .Range("B5").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
             .Range("F5").HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
